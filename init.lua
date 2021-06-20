@@ -3,6 +3,7 @@ require "pluginList"
 require'nv-globals'
 require "misc-utils"
 require 'settings'
+require "themes.colorscheme"
 
 require "top-bufferline"
 require "statusline"
@@ -20,11 +21,6 @@ local g = vim.g
 g.mapleader = " "
 g.auto_save = 0
 
--- colorscheme related stuff
-cmd "syntax on"
-
-local base16 = require "base16"
-base16(base16.themes["onedark"], true)
 
 require "highlights"
 

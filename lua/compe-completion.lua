@@ -16,7 +16,10 @@ require "compe".setup {
     source = {
         buffer = {kind = "﬘", true},
         vsnip = {kind = "﬌"}, --replace to what sign you prefer
-        nvim_lsp = true
+        nvim_lsp = true,
+        spell = {kind = "  "},
+	    tabnine= {king = "tabnine"},
+        emoji = {kind = " ﲃ ", filetypes={"markdown", "text"}}
     }
 }
 

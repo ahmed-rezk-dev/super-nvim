@@ -1,6 +1,6 @@
 local colors = {
     white = "#abb2bf",
-    darker_black = "#1b1f27",
+    darker_black = "#fff",
     black = "#1e222a", --  nvim bg
     black2 = "#252931",
     one_bg = "#282c34", -- real bg of onedark
@@ -13,7 +13,8 @@ local colors = {
     red = "#d47d85",
     baby_pink = "#DE8C92",
     pink = "#ff75a0",
-    line = "#2a2e36", -- for lines like vertsplit
+    line = "#7eca9c", -- for lines like vertsplit
+    indentBlankline = "#6f737b", -- Intdent lines color
     green = "#A3BE8C",
     vibrant_green = "#7eca9c",
     nord_blue = "#81A1C1",

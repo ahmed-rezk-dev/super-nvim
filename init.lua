@@ -1,8 +1,8 @@
 -- load all plugins
 require "pluginList"
-require'nv-globals'
 require "misc-utils"
-require 'settings'
+require 'config.nv-globals'
+require 'config.settings'
 require "themes.colorscheme"
 
 require "top-bufferline"

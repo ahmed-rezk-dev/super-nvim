@@ -14,6 +14,7 @@ local grey = colors.grey
 local grey_fg = colors.grey_fg
 local red = colors.red
 local line = colors.line
+local indentBlankline = colors.indentBlankline
 local green = colors.green
 local nord_blue = colors.nord_blue
 local blue = colors.blue
@@ -36,7 +37,7 @@ end
 
 -- blankline
 
-fg("IndentBlanklineChar", line)
+fg("IndentBlanklineChar", indentBlankline)
 
 -- misc --
 fg("LineNr", grey)
@@ -78,7 +79,7 @@ fg_bg("NvimTreeStatuslineNc", darker_black, darker_black)
 fg("TelescopeBorder", line)
 fg("TelescopePromptBorder", line)
 fg("TelescopeResultsBorder", line)
-fg("TelescopePreviewBorder", grey)
+fg("TelescopePreviewBorder",  line)
 
 -- LspDiagnostics ---
 

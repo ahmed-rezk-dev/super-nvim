@@ -1,4 +1,6 @@
-require("which-key").setup {
+local wk = require("which-key")
+
+wk.setup {
     plugins = {
         marks = true, -- shows a list of your marks on ' and `
         registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
@@ -43,3 +45,13 @@ require("which-key").setup {
     triggers = "auto" -- automatically setup triggers
     -- triggers = {"<leader>"} -- or specifiy a list manually
 }
+
+
+-- all of the mappings below are equivalent
+
+-- method 2
+wk.register({
+  ["<leader>"] = {
+      ["/"] = { "<cmd>CommentToggle<cr>", "Comment Lines" },
+  },
+})

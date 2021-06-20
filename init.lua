@@ -51,6 +51,7 @@ vim.api.nvim_exec([[
 require "zenmode"
 require "whichkey"
 require "dashboard"
+require "commentLins"
 
 -- Colors
 require "colorizer"

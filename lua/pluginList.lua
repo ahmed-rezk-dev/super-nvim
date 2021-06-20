@@ -50,6 +50,8 @@ return require("packer").startup(
         use 'p00f/nvim-ts-rainbow'
         use 'JoosepAlviste/nvim-ts-context-commentstring'
         use 'windwp/nvim-ts-autotag'
+        use 'terrortylor/nvim-comment'
+
     end,
     {
         display = {

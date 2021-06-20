@@ -33,3 +33,12 @@ map("n", "<leader>m", [[ <Cmd> TZMinimalist<CR>]], opt)
 
 map("n", "<C-s>", [[ <Cmd> w <CR>]], opt)
 -- vim.cmd("inoremap jh <Esc>")
+
+-- better window movement
+map('n', '<C-h>', '<C-w>h', {silent = true})
+map('n', '<C-j>', '<C-w>j', {silent = true})
+map('n', '<C-k>', '<C-w>k', {silent = true})
+map('n', '<C-l>', '<C-w>l', {silent = true})
+
+-- TODO fix this
+-- Terminal window navigation

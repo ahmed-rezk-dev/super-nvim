@@ -1,6 +1,8 @@
 -- load all plugins
 require "pluginList"
+require'nv-globals'
 require "misc-utils"
+require 'settings'
 
 require "top-bufferline"
 require "statusline"
@@ -9,7 +11,7 @@ require("colorizer").setup()
 require("neoscroll").setup() -- smooth scroll
 
 -- lsp stuff
-require "nvim-lspconfig"
+
 require "compe-completion"
 
 local cmd = vim.cmd
@@ -57,3 +59,6 @@ vim.api.nvim_exec([[
 require "zenmode"
 require "whichkey"
 require "dashboard"
+
+-- Colors
+require "colorizer"

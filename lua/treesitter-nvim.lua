@@ -13,5 +13,8 @@ ts_config.setup {
     highlight = {
         enable = true,
         use_languagetree = true
-    }
+    },
+    autotag = {enable = true},
+    rainbow = {enable = true},
+    context_commentstring = {enable = true, config = {javascriptreact = {style_element = '{/*%s*/}'}}}
 }

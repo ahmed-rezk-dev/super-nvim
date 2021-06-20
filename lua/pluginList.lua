@@ -45,6 +45,11 @@ return require("packer").startup(
         use "kdav5758/TrueZen.nvim"
         use "folke/which-key.nvim"
         use {"lukas-reineke/indent-blankline.nvim", branch = "lua"}
+
+        -- Treesitter
+        use 'p00f/nvim-ts-rainbow'
+        use 'JoosepAlviste/nvim-ts-context-commentstring'
+        use 'windwp/nvim-ts-autotag'
     end,
     {
         display = {

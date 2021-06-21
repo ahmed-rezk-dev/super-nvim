@@ -19,6 +19,7 @@ return require("packer").startup(
         use "sbdchd/neoformat"
         use "nvim-lua/plenary.nvim"
         use "kabouzeid/nvim-lspinstall"
+        use 'glepnir/lspsaga.nvim'
 
         use "lewis6991/gitsigns.nvim"
         use "akinsho/nvim-bufferline.lua"

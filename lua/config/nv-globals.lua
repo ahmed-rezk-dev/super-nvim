@@ -47,7 +47,7 @@ O = {
         linter = '',
         -- @usage can be 'prettier'
         formatter = '',
-        autoformat = false,
+        autoformat = true,
         diagnostics = {virtual_text = true, signs = true, underline = true}
     },
     json = {

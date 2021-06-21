@@ -1,8 +1,14 @@
 -- load all plugins
 require "pluginList"
 require "misc-utils"
+
+-- Configs
 require 'config.nv-globals'
 require 'config.settings'
+require 'config.utils'
+require 'config.autocommands'
+
+-- Colors/Theme
 require "themes.colorscheme"
 
 require "top-bufferline"
@@ -51,3 +57,29 @@ require "commentLins"
 
 -- Colors
 require "colorizer"
+
+-- LSP
+require('lsp')
+-- require('lsp.clangd')
+-- require('lsp.php-ls')
+-- require('lsp.dart-ls')
+-- require('lsp.lua-ls')
+-- require('lsp.bash-ls')
+-- require('lsp.go-ls')
+require('lsp.js-ts-ls')
+-- require('lsp.python-ls')
+-- require('lsp.rust-ls')
+require('lsp.json-ls')
+-- require('lsp.yaml-ls')
+require('lsp.terraform-ls')
+require('lsp.vim-ls')
+require('lsp.graphql-ls')
+require('lsp.css-ls')
+require('lsp.docker-ls')
+require('lsp.html-ls')
+require('lsp.efm-general-ls')
+-- require('lsp.virtual_text')
+-- require('lsp.latex-ls')
+-- require('lsp.svelte-ls')
+require('lsp.tailwindcss-ls')
+-- require('lsp.emmet-ls')

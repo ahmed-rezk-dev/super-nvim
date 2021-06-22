@@ -44,6 +44,8 @@ vim.cmd('set shell=/bin/zsh')
 -- To disable swap files
 vim.cmd('set noswapfile')
 
+-- cursor blank opation
+-- vim.cmd('set guicursor=a:blinkon0')
 
 -- vim.o.guifont = "JetBrains\\ Mono\\ Regular\\ Nerd\\ Font\\ Complete"
 

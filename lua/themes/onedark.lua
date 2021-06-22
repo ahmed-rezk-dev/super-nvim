@@ -2,6 +2,7 @@ local colors = {
     white = "#abb2bf",
     darker_black = "#fff",
     black = "#1e222a", --  nvim bg
+    active_tab_bg = "#3D4E42",
     black2 = "#252931",
     one_bg = "#282c34", -- real bg of onedark
     one_bg2 = "#353b45",

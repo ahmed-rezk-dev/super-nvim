@@ -20,6 +20,7 @@ local nord_blue = colors.nord_blue
 local blue = colors.blue
 local yellow = colors.yellow
 local purple = colors.purple
+local active_tab_bg = colors.active_tab_bg
 
 -- for guifg , bg
 
@@ -103,32 +104,32 @@ fg_bg("BufferLineFill", grey_fg, black2)
 fg_bg("BufferLineBackground", light_grey, black2)
 
 fg_bg("BufferLineBufferVisible", light_grey, black2)
-fg_bg("BufferLineBufferSelected", white, black)
+fg_bg("BufferLineBufferSelected", white, active_tab_bg)
 
 cmd "hi BufferLineBufferSelected gui=bold"
 
 -- tabs
 fg_bg("BufferLineTab", light_grey, one_bg3)
 fg_bg("BufferLineTabSelected", black2, nord_blue)
-fg_bg("BufferLineTabClose", red, black)
+fg_bg("BufferLineTabClose", red, active_tab_bg)
 
 fg_bg("BufferLineIndicator", black2, black2)
-fg_bg("BufferLineIndicatorSelected", black, black)
+fg_bg("BufferLineIndicatorSelected",  active_tab_bg,  active_tab_bg)
 
 -- separators
 fg_bg("BufferLineSeparator", line, black2)
 fg_bg("BufferLineSeparatorVisible", line, black2)
-fg_bg("BufferLineSeparatorSelected", black, black2)
+fg_bg("BufferLineSeparatorSelected",  active_tab_bg, black2)
 
 -- modified buffers
 fg_bg("BufferLineModified", red, black2)
 fg_bg("BufferLineModifiedVisible", red, black2)
-fg_bg("BufferLineModifiedSelected", green, black)
+fg_bg("BufferLineModifiedSelected", green,  active_tab_bg)
 
 -- close buttons
 fg_bg("BufferLineCLoseButtonVisible", light_grey, black2)
 fg_bg("BufferLineCLoseButton", light_grey, black2)
-fg_bg("BufferLineCLoseButtonSelected", red, black)
+fg_bg("BufferLineCLoseButtonSelected", red, active_tab_bg)
 
 -- dashboard
 

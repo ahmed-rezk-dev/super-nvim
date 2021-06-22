@@ -53,5 +53,6 @@ wk.setup {
 wk.register({
   ["<leader>"] = {
       ["/"] = { "<cmd>CommentToggle<cr>", "Comment Lines" },
+      ["H"] = { "<cmd>let @/ = ''<cr>", "No highlight" },
   },
 })

@@ -86,6 +86,7 @@ local opts = {
       -- " Debugging
       g = {
         name = "Git",
+        g = { "<cmd>lua require('terminal')._lazygit_toggle()<cr>", "LazyGit" },
         j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
         k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
         l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
@@ -154,6 +155,14 @@ local opts = {
           "Colorscheme with Preview",
         },
       },
+
+      t = {
+        name = "Terminal",
+        t = { ":ToggleTerm<cr>", "Toggle" },
+        a = { ":ToggleTermOpenAll<cr>", "Show All" },
+        c = { ":ToggleTermCloseAll<cr>", "Close All" },
+      },
+
       T = {
         name = "Treesitter",
         i = { ":TSConfigInfo<cr>", "Info" },

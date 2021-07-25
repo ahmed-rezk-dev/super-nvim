@@ -14,7 +14,6 @@ require "themes.colorscheme"
 require "top-bufferline"
 require "statusline"
 
-require("colorizer").setup()
 require("neoscroll").setup() -- smooth scroll
 
 -- lsp stuff
@@ -57,6 +56,8 @@ require "commentLins"
 
 -- Colors
 require "colorizer"
+-- Terminal
+require("terminal").config()
 
 -- LSP
 require('lsp')

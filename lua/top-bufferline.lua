@@ -30,3 +30,5 @@ map("n", "<C-p>", [[<Cmd>BufferLinePick<CR>]], opt) -- pick tab
 -- move between tabs
 map("n", "<TAB>", [[<Cmd>BufferLineCycleNext<CR>]], opt)
 map("n", "<S-TAB>", [[<Cmd>BufferLineCyclePrev<CR>]], opt)
+map("n", "<S-l>", [[<Cmd>BufferLineCycleNext<CR>]], opt)
+map("n", "<S-h>", [[<Cmd>BufferLineCyclePrev<CR>]], opt)

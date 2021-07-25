@@ -9,7 +9,6 @@ require("telescope").setup {
             "--column",
             "--smart-case"
         },
-        prompt_position = "bottom",
         prompt_prefix = " ",
         selection_caret = " ",
         entry_prefix = "  ",
@@ -17,7 +16,10 @@ require("telescope").setup {
         selection_strategy = "reset",
         sorting_strategy = "descending",
         layout_strategy = "horizontal",
-        layout_defaults = {
+        layout_config = {
+            width = 0.75,
+            preview_cutoff = 120,
+            prompt_position = "bottom",
             horizontal = {
                 mirror = false,
                 preview_width = 0.5
@@ -29,12 +31,9 @@ require("telescope").setup {
         file_sorter = require "telescope.sorters".get_fuzzy_file,
         file_ignore_patterns = {},
         generic_sorter = require "telescope.sorters".get_generic_fuzzy_sorter,
-        shorten_path = true,
+        -- path_display = true,
+        -- path_display = { shorten = 5 },
         winblend = 0,
-        width = 0.75,
-        preview_cutoff = 120,
-        results_height = 1,
-        results_width = 0.8,
         border = {},
         borderchars = {"─", "│", "─", "│", "╭", "╮", "╯", "╰"},
         color_devicons = true,
@@ -56,27 +55,3 @@ require("telescope").setup {
 
 require("telescope").load_extension("media_files")
 
-local opt = {noremap = true, silent = true}
-
-vim.g.mapleader = " "
-
--- mappings
-vim.api.nvim_set_keymap("n", "<Leader>ff", [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], opt)
-vim.api.nvim_set_keymap(
-    "n",
-    "<Leader>fp",
-    [[<Cmd>lua require('telescope').extensions.media_files.media_files()<CR>]],
-    opt
-)
-
-vim.api.nvim_set_keymap("n", "<Leader>fb", [[<Cmd>lua require('telescope.builtin').buffers()<CR>]], opt)
-vim.api.nvim_set_keymap("n", "<Leader>fh", [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]], opt)
-vim.api.nvim_set_keymap("n", "<Leader>fo", [[<Cmd>lua require('telescope.builtin').oldfiles()<CR>]], opt)
-vim.api.nvim_set_keymap("n", "<Leader>fm", [[<Cmd> Neoformat<CR>]], opt)
-
--- dashboard stuff
-vim.api.nvim_set_keymap("n", "<Leader>fw", [[<Cmd> Telescope live_grep<CR>]], opt)
-vim.api.nvim_set_keymap("n", "<Leader>fn", [[<Cmd> DashboardNewFile<CR>]], opt)
-vim.api.nvim_set_keymap("n", "<Leader>fb", [[<Cmd> DashboardJumpMarks<CR>]], opt)
-vim.api.nvim_set_keymap("n", "<Leader>fl", [[<Cmd> SessionLoad<CR>]], opt)
-vim.api.nvim_set_keymap("n", "<Leader>fs", [[<Cmd> SessionSave<CR>]], opt)

@@ -68,6 +68,7 @@ local opts = {
       ["e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" },
       ["f"] = { "<cmd>Telescope find_files<CR>", "Find File" },
       ["h"] = { '<cmd>let @/=""<CR>', "No Highlight" },
+      L = { "<cmd>:put =printf('console.log('' 🔔 %s 👉 %s 👉🏼 %s:'', %s);', line('.'), bufname(), expand('<cword>'), expand('<cword>'))<cr>", "Javascript Log" },
       p = {
         name = "Packer",
         c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -167,6 +168,13 @@ local opts = {
         name = "Treesitter",
         i = { ":TSConfigInfo<cr>", "Info" },
       },
+
+      -- S = {
+      --   name = "Saerch & Replace",
+      --   s = { "<cmd>:lua require('spectre').open()<cr>", "All files" },
+      --   w = { "<cmd>:lua require('spectre').open_visual({select_word=true})<cr>", "Search current word" },
+      --   f = { "<cmd>:lua require('spectre').open_file_search()<cr>", "Search in current file" },
+      -- },
     }
 
 

@@ -64,6 +64,18 @@ return require("packer").startup(
         -- Terminal
         use {"akinsho/nvim-toggleterm.lua"}
 
+        -- Hop is an EasyMotion-like plugin allowing you to jump anywhere in a document with as few keystrokes as possible. 
+        use {
+          'phaazon/hop.nvim',
+          as = 'hop',
+          config = function()
+            -- you can configure Hop the way you like here; see :h hop-config
+            require'hop'.setup()
+            vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
+            vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
+          end
+        }
+
     end,
     {
         display = {

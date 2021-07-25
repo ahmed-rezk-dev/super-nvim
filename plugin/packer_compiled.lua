@@ -89,6 +89,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
+  hop = {
+    config = { "\27LJ\2\n¿\1\0\0\6\0\r\0\0226\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\a\0'\4\b\0005\5\t\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\n\0'\4\v\0005\5\f\0B\0\5\1K\0\1\0\1\0\1\vsilent\2\17:HopWord<cr>\6S\1\0\1\vsilent\2\18:HopChar2<cr>\6s\6n\20nvim_set_keymap\bapi\bvim\nsetup\bhop\frequire\0" },
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/hop"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
@@ -145,6 +150,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
+  ["nvim-toggleterm.lua"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-toggleterm.lua"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
@@ -173,6 +182,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
   ["popup.nvim"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/popup.nvim"
@@ -188,6 +201,10 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/todo-comments.nvim"
   },
   ["vim-auto-save"] = {
     loaded = true,
@@ -212,6 +229,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: hop
+time([[Config for hop]], true)
+try_loadstring("\27LJ\2\n¿\1\0\0\6\0\r\0\0226\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\a\0'\4\b\0005\5\t\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\n\0'\4\v\0005\5\f\0B\0\5\1K\0\1\0\1\0\1\vsilent\2\17:HopWord<cr>\6S\1\0\1\vsilent\2\18:HopChar2<cr>\6s\6n\20nvim_set_keymap\bapi\bvim\nsetup\bhop\frequire\0", "config", "hop")
+time([[Config for hop]], false)
 if should_profile then save_profiles() end
 
 end)

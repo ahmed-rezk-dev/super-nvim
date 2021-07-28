@@ -68,7 +68,7 @@ local opts = {
       ["e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" },
       ["f"] = { "<cmd>Telescope find_files<CR>", "Find File" },
       ["h"] = { '<cmd>let @/=""<CR>', "No Highlight" },
-      L = { "<cmd>:put =printf('console.log('' 🔔 %s 👉 %s 👉🏼 %s:'', %s);', line('.'), bufname(), expand('<cword>'), expand('<cword>'))<cr>", "Javascript Log" },
+      L = { "<cmd>:put =printf('console.log('' 🔔 %s 👉 %s 👉 %s:'', %s);', line('.'), expand('%:t'), expand('<cword>'), expand('<cword>'))<cr>", "Javascript Log" },
       p = {
         name = "Packer",
         c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -151,6 +151,7 @@ local opts = {
         t = { "<cmd>Telescope live_grep<cr>", "Text" },
         k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
         C = { "<cmd>Telescope commands<cr>", "Commands" },
+        m = { "<cmd>Telescope marks<cr>", "Bookmarks" },
         p = {
           "<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>",
           "Colorscheme with Preview",
@@ -168,6 +169,12 @@ local opts = {
         name = "Treesitter",
         i = { ":TSConfigInfo<cr>", "Info" },
       },
+
+      S = {
+          name = "Sessions",
+          s = {":SessionSave<cr>", "Save Session"},
+          l = {":SessionLoad<cr>", "Load Session"}
+      }
 
       -- S = {
       --   name = "Saerch & Replace",

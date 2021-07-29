@@ -13,13 +13,23 @@ require "compe".setup {
     max_kind_width = 100,
     max_menu_width = 100,
     documentation = true,
+
     source = {
-        buffer = {kind = "﬘", true},
-        vsnip = {kind = "﬌"}, --replace to what sign you prefer
-        nvim_lsp = true,
-        spell = {kind = "  "},
+        path = { kind = "   (Path)" },
+        buffer = { kind = "   (Buffer)" },
+        calc = { kind = "   (Calc)" },
+        vsnip = { kind = "   (Snippet)" },
+        nvim_lsp = { kind = "   (LSP)" },
+        spell = { kind = "   (Spell)" },
 	    tabnine= {king = "tabnine"},
-        emoji = {kind = " ﲃ ", filetypes={"markdown", "text"}}
+        emoji = {kind = " ﲃ (Emoji)", filetypes={"markdown", "text"}},
+        -- Nvim
+        nvim_lua = {kind = "  "},
+        tags = false,
+        vim_dadbod_completion = true,
+        snippets_nvim = {kind = "  "},
+        ultisnips = {kind = "  "},
+        treesitter = {kind = "  "},
     }
 }
 

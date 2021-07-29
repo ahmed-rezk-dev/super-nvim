@@ -1,6 +1,7 @@
 O = {
     auto_close_tree = 0,
     auto_complete = true,
+    transparent_window = true,
     colorscheme = 'gruvbox-dark',
     -- colorscheme = 'gruvbox',
     -- background = 'light',

@@ -1,3 +1,5 @@
+local cmd = vim.cmd
+
 vim.cmd('set iskeyword+=-') -- treat dash separated words as a word text object"
 vim.cmd('set shortmess+=c') -- Don't pass messages to |ins-completion-menu|.
 vim.cmd('set inccommand=split') -- Make substitution work in realtime
@@ -91,3 +93,12 @@ vim.o.cmdheight=1 -- to remove extra line at the bottom
 -- Fold
 vim.wo.foldmethod='indent'
 
+if O.transparent_window then
+  cmd "au ColorScheme * hi Normal ctermbg=none guibg=none"
+  cmd "au ColorScheme * hi SignColumn ctermbg=none guibg=none"
+  cmd "au ColorScheme * hi NormalNC ctermbg=none guibg=none"
+  cmd "au ColorScheme * hi MsgArea ctermbg=none guibg=none"
+  cmd "au ColorScheme * hi TelescopeBorder ctermbg=none guibg=none"
+  cmd "au ColorScheme * hi NvimTreeNormal ctermbg=none guibg=none"
+  cmd "let &fcs='eob: '"
+end

@@ -9,7 +9,8 @@ return require("packer").startup(
         -- color related stuff
         use "siduck76/nvim-base16.lua"
         use "norcalli/nvim-colorizer.lua"
-        use 'christianchiarulli/nvcode-color-schemes.vim'
+        -- use 'christianchiarulli/nvcode-color-schemes.vim'
+        -- use "morhetz/gruvbox"
 
         -- lang stuff
         use "nvim-treesitter/nvim-treesitter"

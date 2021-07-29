@@ -98,6 +98,8 @@ fg("LspDiagnosticsVirtualTextInformation", green)
 fg("LspDiagnosticsSignHint", purple)
 fg("LspDiagnosticsVirtualTextHint", purple)
 
+-- fg("MatchWord", purple)
+
 -- bufferline
 
 fg_bg("BufferLineFill", grey_fg, black2)

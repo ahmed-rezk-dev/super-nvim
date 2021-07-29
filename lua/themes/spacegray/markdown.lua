@@ -1,0 +1,27 @@
+local markdown = {
+  markdownBlockquote = { fg = C.accent },
+  markdownBold = { fg = C.yellow, style = "bold" },
+  markdownCode = { fg = C.light_green },
+  markdownCodeBlock = { fg = C.light_green },
+  markdownCodeDelimiter = { fg = C.light_green },
+  markdownH1 = { fg = C.light_green },
+  markdownH2 = { fg = C.light_green },
+  markdownH3 = { fg = C.light_green },
+  markdownH4 = { fg = C.light_green },
+  markdownH5 = { fg = C.light_green },
+  markdownH6 = { fg = C.light_green },
+  markdownHeadingDelimiter = { fg = C.red },
+  markdownHeadingRule = { fg = C.accent },
+  markdownId = { fg = C.purple },
+  markdownIdDeclaration = { fg = C.light_green },
+  markdownIdDelimiter = { fg = C.light_gray },
+  markdownLinkDelimiter = { fg = C.light_gray },
+  markdownItalic = { style = "italic" },
+  markdownLinkText = { fg = C.light_green },
+  markdownListMarker = { fg = C.red },
+  markdownOrderedListMarker = { fg = C.red },
+  markdownRule = { fg = C.accent },
+  markdownUrl = { fg = C.cyan, style = "underline" },
+}
+
+return markdown

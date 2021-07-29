@@ -114,10 +114,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/neoscroll.nvim"
   },
-  ["nvcode-color-schemes.vim"] = {
-    loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"
-  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-autopairs"

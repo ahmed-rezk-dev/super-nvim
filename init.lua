@@ -2,14 +2,21 @@
 require "pluginList"
 require "misc-utils"
 
+
+
+-- local base16 = require "base16"
+-- base16(base16.themes["themes.gruvbox-dark"], true)
+
 -- Configs
 require 'config.nv-globals'
 require 'config.settings'
 require 'config.utils'
 require 'config.autocommands'
 
+
+
 -- Colors/Theme
-require "themes.colorscheme"
+-- require "themes.colorscheme"
 
 require "top-bufferline"
 require "statusline"
@@ -26,8 +33,10 @@ local g = vim.g
 g.mapleader = " "
 g.auto_save = 0
 
+require 'themes.gruvbox-dark'
+-- require "highlights"
 
-require "highlights"
+
 
 -- blankline
 require "indentline"
@@ -55,7 +64,17 @@ require "dashboard"
 require "commentLins"
 
 -- Colors
-require "colorizer"
+require'colorizer'.setup(
+  {'*';},
+  {
+    RGB      = true;         -- #RGB hex codes
+    RRGGBB   = true;         -- #RRGGBB hex codes
+    RRGGBBAA = true;         -- #RRGGBBAA hex codes
+    rgb_fn   = true;         -- CSS rgb() and rgba() functions
+    hsl_fn   = true;         -- CSS hsl() and hsla() functions
+    css      = true;         -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+    css_fn   = true;         -- Enable all CSS *functions*: rgb_fn, hsl_fn
+  })
 -- Terminal
 require("terminal").config()
 
@@ -84,3 +103,4 @@ require('lsp.efm-general-ls')
 -- require('lsp.svelte-ls')
 require('lsp.tailwindcss-ls')
 -- require('lsp.emmet-ls')
+vim.g.colors_name = O.colorscheme -- Colorscheme must get called after plugins are loaded or it will break new installs.

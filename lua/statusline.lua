@@ -138,13 +138,45 @@ local get_lsp_client = function(msg)
 end
 
 gls.right[1] = {
+    DiagnosticError = {
+        provider = "DiagnosticError",
+        icon = "  ",
+        highlight = { colors.red, colors.statusline_bg},
+    },
+}
+
+gls.right[2] = {
+    DiagnosticWarn = {
+    provider = "DiagnosticWarn",
+    icon = "  ",
+    highlight = { colors.orange, colors.statusline_bg},
+  },
+}
+
+gls.right[3] = {
+    DiagnosticInfo = {
+        provider = "DiagnosticInfo",
+        icon = "  ",
+        highlight = { colors.yellow, colors.statusline_bg},
+    },
+}
+
+gls.right[4] = {
+    DiagnosticHint = {
+        provider = "DiagnosticHint",
+        icon = "  ",
+        highlight = { colors.blue, colors.statusline_bg},
+    },
+}
+
+gls.right[5] = {
     lsp_status = {
         provider = get_lsp_client,
         highlight = {colors.grey_fg2, colors.statusline_bg}
     }
 }
 
-gls.right[2] = {
+gls.right[6] = {
     GitIcon = {
         provider = function()
             return " "
@@ -156,7 +188,7 @@ gls.right[2] = {
     }
 }
 
-gls.right[3] = {
+gls.right[7] = {
     GitBranch = {
         provider = "GitBranch",
         condition = require("galaxyline.provider_vcs").check_git_workspace,
@@ -164,7 +196,7 @@ gls.right[3] = {
     }
 }
 
-gls.right[4] = {
+gls.right[8] = {
     viMode_icon = {
         provider = function()
             return " "
@@ -175,7 +207,7 @@ gls.right[4] = {
     }
 }
 
-gls.right[5] = {
+gls.right[9] = {
     ViMode = {
         provider = function()
             local alias = {
@@ -199,7 +231,7 @@ gls.right[5] = {
     }
 }
 
-gls.right[6] = {
+gls.right[10] = {
     some_icon = {
         provider = function()
             return " "
@@ -210,7 +242,7 @@ gls.right[6] = {
     }
 }
 
-gls.right[7] = {
+gls.right[11] = {
     line_percentage = {
         provider = function()
             local current_line = vim.fn.line(".")

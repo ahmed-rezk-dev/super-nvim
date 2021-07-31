@@ -65,6 +65,10 @@ return require("packer").startup(
         -- Terminal
         use {"akinsho/nvim-toggleterm.lua"}
 
+        -- use "chimay/wheel"
+        -- use "vim-ctrlspace/vim-ctrlspace"
+        -- use "https://github.com/hkupty/nvimux"
+
         -- Hop is an EasyMotion-like plugin allowing you to jump anywhere in a document with as few keystrokes as possible. 
         use {
           'phaazon/hop.nvim',

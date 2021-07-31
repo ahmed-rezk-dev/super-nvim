@@ -2,7 +2,8 @@ O = {
     auto_close_tree = 0,
     auto_complete = true,
     transparent_window = true,
-    colorscheme = 'gruvbox-dark',
+    colorscheme = 'spacegray',
+    -- colorscheme = 'gruvbox-dark',
     -- colorscheme = 'gruvbox',
     -- background = 'light',
     background = 'dark',
@@ -11,6 +12,22 @@ O = {
     number = true,
     relative_number = true,
     shell = 'bash',
+
+    lsp = {
+        diagnostics = {
+          virtual_text = {
+            prefix = "",
+            spacing = 0,
+          },
+          signs = true,
+          underline = true,
+        },
+        document_highlight = true,
+        popup_border = "single",
+        default_keybinds = true,
+        on_attach_callback = nil,
+    },
+
 
     -- @usage pass a table with your desired languages
     treesitter = {

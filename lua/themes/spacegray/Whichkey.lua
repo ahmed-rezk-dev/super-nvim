@@ -1,7 +1,7 @@
 local Whichkey = {
   WhichKey = { fg = C.purple },
-  WhichKeySeperator = { fg = C.light_green },
-  WhichKeyGroup = { fg = C.light_green },
+  WhichKeySeperator = { fg = C.green },
+  WhichKeyGroup = { fg = C.blue },
   WhichKeyDesc = { fg = C.cyan },
   WhichKeyFloat = { bg = C.alt_bg },
 }

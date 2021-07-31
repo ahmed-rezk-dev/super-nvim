@@ -34,6 +34,7 @@ g.mapleader = " "
 g.auto_save = 0
 
 require 'themes.gruvbox-dark'
+-- require 'themes.spacegray'
 -- require "highlights"
 
 

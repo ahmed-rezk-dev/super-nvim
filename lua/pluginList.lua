@@ -21,6 +21,7 @@ return require("packer").startup(
         use "nvim-lua/plenary.nvim"
         use "kabouzeid/nvim-lspinstall"
         use 'glepnir/lspsaga.nvim'
+        use "ray-x/lsp_signature.nvim"
 
         use "lewis6991/gitsigns.nvim"
         use "akinsho/nvim-bufferline.lua"

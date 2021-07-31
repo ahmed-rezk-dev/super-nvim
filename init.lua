@@ -26,6 +26,7 @@ require("neoscroll").setup() -- smooth scroll
 -- lsp stuff
 
 require "compe-completion"
+require "lsp-signature"
 
 local cmd = vim.cmd
 local g = vim.g

@@ -1,10 +1,14 @@
+---  HELPERS  ---
 local cmd = vim.cmd
+local opt = vim.opt
 
+cmd "filetype plugin on"
 vim.cmd('set iskeyword+=-') -- treat dash separated words as a word text object"
 vim.cmd('set shortmess+=c') -- Don't pass messages to |ins-completion-menu|.
 vim.cmd('set inccommand=split') -- Make substitution work in realtime
 vim.o.hidden = O.hidden_files -- Required to keep multiple buffers open multiple buffers
 vim.o.title = true
+
 TERMINAL = vim.fn.expand('$TERMINAL')
 vim.cmd('let &titleold="'..TERMINAL..'"')
 vim.o.titlestring="%<%F%=%l/%L - nvim"
@@ -39,7 +43,7 @@ vim.o.clipboard = "unnamedplus" -- Copy paste between vim and everything else
 -- vim.o.guifont = "JetBrainsMono\\ Nerd\\ Font\\ Mono:h18"
 -- vim.o.guifont = "Hack\\ Nerd\\ Font\\ Mono"
 -- vim.o.guifont = "SauceCodePro Nerd Font:h17"
-vim.o.guifont = "FiraCode Nerd Font:h17"
+vim.o.guifont = "FiraCode Nerd Mono:h17"
 vim.cmd('set shell=/bin/zsh')
 -- vim.cmd('set shell=~/.zshrc')
 
@@ -101,4 +105,12 @@ if O.transparent_window then
   cmd "au ColorScheme * hi TelescopeBorder ctermbg=none guibg=none"
   cmd "au ColorScheme * hi NvimTreeNormal ctermbg=none guibg=none"
   cmd "let &fcs='eob: '"
+end
+
+---  SETTINGS  ---
+
+opt.shortmess:append "c"
+
+for k, v in pairs(O.default_options) do
+  vim.opt[k] = v
 end

@@ -106,6 +106,38 @@ require "nvim-web-devicons".setup {
             icon = "",
             color = colors.orange,
             name = "rpm"
+        },
+        ['.prettierrc.js'] = {
+            icon = "",
+            color = colors.orange,
+            name = "prettierrc"
+        },
+        ['.prettierrc'] = {
+            icon = "",
+            color = colors.orange,
+            name = "prettierrc"
+        },
+        ['.prettierignore'] = {
+            icon = "",
+            color = colors.orange,
+            name = "prettierignore"
+        },
+        ['package.json']= {
+            icon = "",
+            color = colors.red,
+            name = "packageJson"
+        },
+        ['.eslintrc']= {
+            icon = "",
+            color = colors.blue,
+            name = "eslintrc"
+        },
+        ['.env']= {
+            icon = "",
+            color = colors.sun,
+            name = "env"
         }
+
+
     }
 }

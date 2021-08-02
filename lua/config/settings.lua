@@ -98,12 +98,12 @@ vim.o.cmdheight=1 -- to remove extra line at the bottom
 vim.wo.foldmethod='indent'
 
 if O.transparent_window then
-  cmd "au ColorScheme * hi Normal ctermbg=none guibg=none"
-  cmd "au ColorScheme * hi SignColumn ctermbg=none guibg=none"
-  cmd "au ColorScheme * hi NormalNC ctermbg=none guibg=none"
-  cmd "au ColorScheme * hi MsgArea ctermbg=none guibg=none"
-  cmd "au ColorScheme * hi TelescopeBorder ctermbg=none guibg=none"
-  cmd "au ColorScheme * hi NvimTreeNormal ctermbg=none guibg=none"
+  cmd "hi Normal ctermbg=none guibg=none"
+  cmd "hi SignColumn ctermbg=none guibg=none"
+  cmd "hi NormalNC ctermbg=none guibg=none"
+  cmd "hi MsgArea ctermbg=none guibg=none"
+  cmd "hi TelescopeBorder ctermbg=none guibg=none"
+  cmd "hi NvimTreeNormal ctermbg=none guibg=none"
   cmd "let &fcs='eob: '"
 end
 

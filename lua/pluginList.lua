@@ -81,6 +81,14 @@ return require("packer").startup(
             vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
           end
         }
+        
+        -- Debug Adapter Protocol
+        use 'mfussenegger/nvim-dap'
+        use 'rcarriga/nvim-dap-ui'
+        use {'nvim-telescope/telescope-dap.nvim'}
+        use {'Pocco81/DAPInstall.nvim'}
+
+        use {'tzachar/compe-tabnine', run='./install.sh'}
 
     end,
     {

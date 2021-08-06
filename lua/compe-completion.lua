@@ -21,7 +21,7 @@ require "compe".setup {
         vsnip = { kind = "   (Snippet)" },
         nvim_lsp = { kind = "   (LSP)" },
         spell = { kind = "   (Spell)" },
-	    tabnine= {king = "tabnine"},
+	      tabnine= {kind = " ﮧ (tabnine)"},
         emoji = {kind = " ﲃ (Emoji)", filetypes={"markdown", "text"}},
         -- Nvim
         nvim_lua = {kind = "  "},

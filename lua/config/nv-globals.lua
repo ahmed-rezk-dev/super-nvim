@@ -17,6 +17,7 @@ O = {
     number = true,
     relative_number = true,
     shell = 'bash',
+    vsnip_dir = os.getenv "HOME" .. "/.config/snippets",
 
 
     default_options = {

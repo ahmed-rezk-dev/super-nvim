@@ -16,12 +16,12 @@ require "compe".setup {
 
     source = {
         path = { kind = "   (Path)" },
-        buffer = { kind = "   (Buffer)" },
-        calc = { kind = "   (Calc)" },
-        vsnip = { kind = "   (Snippet)" },
         nvim_lsp = { kind = "   (LSP)" },
-        spell = { kind = "   (Spell)" },
+        buffer = { kind = "   (Buffer)" },
+        vsnip = { kind = "   (Snippet)" },
 	      tabnine= {kind = " ﮧ (tabnine)"},
+        spell = { kind = "   (Spell)" },
+        calc = { kind = "   (Calc)" },
         emoji = {kind = " ﲃ (Emoji)", filetypes={"markdown", "text"}},
         -- Nvim
         nvim_lua = {kind = "  "},
@@ -85,3 +85,5 @@ function _G.completions()
 end
 
 vim.api.nvim_set_keymap("i", "<CR>", "v:lua.completions()", {expr = true})
+
+vim.g.vsnip_snippet_dir = O.vsnip_dir

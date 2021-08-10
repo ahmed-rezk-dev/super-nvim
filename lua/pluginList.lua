@@ -35,6 +35,7 @@ return require("packer").startup(
 
         -- snippet support
         use "hrsh7th/vim-vsnip"
+        use 'hrsh7th/vim-vsnip-integ'
         use "rafamadriz/friendly-snippets"
 
         -- file managing , picker etc

@@ -30,8 +30,7 @@ return require("packer").startup(
         use "alvan/vim-closetag"
 
         -- Syntax
-        use { 'folke/todo-comments.nvim', requires = 'nvim-lua/plenary.nvim' }
-
+        use { 'folke/todo-comments.nvim', requires = 'nvim-lua/plenary.nvim' } -- Better todo heighlight
 
         -- snippet support
         use "hrsh7th/vim-vsnip"

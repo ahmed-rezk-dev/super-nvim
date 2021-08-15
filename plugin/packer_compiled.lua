@@ -69,9 +69,17 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["DAPInstall.nvim"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/DAPInstall.nvim"
+  },
   ["TrueZen.nvim"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/TrueZen.nvim"
+  },
+  ["compe-tabnine"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/compe-tabnine"
   },
   ["dashboard-nvim"] = {
     loaded = true,
@@ -142,6 +150,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-dap"
+  },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-dap-ui"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
@@ -194,6 +210,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/startuptime.vim"
   },
+  ["telescope-dap.nvim"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim"
+  },
   ["telescope-media-files.nvim"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim"
@@ -221,6 +241,10 @@ _G.packer_plugins = {
   ["vim-vsnip"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+  },
+  ["vim-vsnip-integ"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
   },
   ["which-key.nvim"] = {
     loaded = true,

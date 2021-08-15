@@ -38,6 +38,9 @@ require 'themes.gruvbox-dark'
 -- require 'themes.spacegray'
 -- require "highlights"
 
+-- Syntax
+require 'pl-todo-comments'
+
 
 
 -- blankline
@@ -80,6 +83,12 @@ require'colorizer'.setup(
 -- Terminal
 require("terminal").config()
 
+-- Debug Adapter Protocol
+-- require 'debug-ui'
+require 'dbg'
+
+
+
 -- LSP
 require('lsp')
 -- require('lsp.clangd')
@@ -104,5 +113,5 @@ require('lsp.efm-general-ls')
 -- require('lsp.virtual_text')
 -- require('lsp.latex-ls')
 -- require('lsp.svelte-ls')
--- require('lsp.emmet-ls')
+require('lsp.emmet-ls')
 vim.g.colors_name = O.colorscheme -- Colorscheme must get called after plugins are loaded or it will break new installs.

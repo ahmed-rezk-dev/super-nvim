@@ -85,6 +85,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
   },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/formatter.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/friendly-snippets"
@@ -206,6 +210,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
+  ["project.nvim"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/project.nvim"
+  },
   ["startuptime.vim"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/startuptime.vim"
@@ -237,6 +245,10 @@ _G.packer_plugins = {
   ["vim-devicons"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-devicons"
+  },
+  ["vim-rooter"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-rooter"
   },
   ["vim-vsnip"] = {
     loaded = true,

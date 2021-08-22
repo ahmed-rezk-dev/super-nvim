@@ -133,7 +133,7 @@ local get_lsp_client = function(msg)
   if lsps == "" then
     return msg
   else
-    return "  " .. lsps .. " "
+    return "  " .. lsps .. " / " .. buf_ft  .. " "
   end
 end
 

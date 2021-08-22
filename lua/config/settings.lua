@@ -114,3 +114,5 @@ opt.shortmess:append "c"
 for k, v in pairs(O.default_options) do
   vim.opt[k] = v
 end
+
+-- vim.g.user_emmet_leader_key = "<Tab>"

@@ -175,6 +175,12 @@ local opts = {
         T = { "<cmd>TodoTelescope <cr>", "TODO" },
       },
 
+    r = {
+      name = 'Seacrh & Replace',
+      w = { "<cmd>:lua require('spectre').open_visual({select_word=true})<cr>", "Search current word" },
+      f = { "<cmd>:lua require('spectre').open_file_search()<cr>", "Search in current file" },
+    },
+
       t = {
         name = "Terminal",
         t = { ":ToggleTerm<cr>", "Toggle" },

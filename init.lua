@@ -24,9 +24,9 @@ require "statusline"
 require("neoscroll").setup() -- smooth scroll
 
 -- lsp stuff
-
 require "compe-completion"
 require "lsp-signature"
+require "pl-formatter"
 
 local cmd = vim.cmd
 local g = vim.g
@@ -89,12 +89,20 @@ require 'dbg'
 
 
 
+          require("project_nvim").setup {
+            patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json", 'src', '.env' },
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+          }
+
+
 -- LSP
 require('lsp')
 -- require('lsp.clangd')
 -- require('lsp.php-ls')
 -- require('lsp.dart-ls')
--- require('lsp.lua-ls')
+require('lsp.lua-ls')
 -- require('lsp.bash-ls')
 -- require('lsp.go-ls')
 require('lsp.js-ts-ls')
@@ -114,4 +122,12 @@ require('lsp.efm-general-ls')
 -- require('lsp.latex-ls')
 -- require('lsp.svelte-ls')
 require('lsp.emmet-ls')
+
 vim.g.colors_name = O.colorscheme -- Colorscheme must get called after plugins are loaded or it will break new installs.
+-- vim.cmd "let proj = FindRootDirectory()"
+-- local root_dir = vim.api.nvim_get_var "proj"
+
+-- lua
+-- vim.g.rooter_silent_chdir = 1
+vim.g.nvim_tree_update_cwd = 1
+vim.g.nvim_tree_respect_buf_cwd = 1

@@ -12,6 +12,13 @@ return require("packer").startup(
         -- use 'christianchiarulli/nvcode-color-schemes.vim'
         -- use "morhetz/gruvbox"
 
+        -- vim-rooter
+        use "airblade/vim-rooter"
+        
+        use {
+          "ahmedkhalf/project.nvim"
+        }
+
         -- lang stuff
         use "nvim-treesitter/nvim-treesitter"
         use "neovim/nvim-lspconfig"
@@ -29,8 +36,11 @@ return require("packer").startup(
         use "windwp/nvim-autopairs"
         use "alvan/vim-closetag"
 
+        use "mhartington/formatter.nvim"
+
         -- Syntax
         use { 'folke/todo-comments.nvim', requires = 'nvim-lua/plenary.nvim' } -- Better todo heighlight
+        use "lumiliet/vim-twig"
 
         -- snippet support
         use "hrsh7th/vim-vsnip"
@@ -89,6 +99,12 @@ return require("packer").startup(
         use {'Pocco81/DAPInstall.nvim'}
 
         use {'tzachar/compe-tabnine', run='./install.sh'}
+
+        use 'kamykn/spelunker.vim'
+        use 'kamykn/popup-menu.nvim'
+
+        -- Search & Replace
+        use 'windwp/nvim-spectre'
 
     end,
     {

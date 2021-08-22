@@ -54,4 +54,25 @@ require("telescope").setup {
 }
 
 require("telescope").load_extension("media_files")
+require('telescope').load_extension('projects')
 
+local M = {}
+
+function M.project_search()
+	local rootdir = vim.fn.FindRootDirectory()
+	if rootdir == '' then
+		rootdir = vim.fn.getcwd()
+	end
+	require('telescope.builtin').find_files{ cwd = rootdir }
+end
+
+return setmetatable(
+	{},
+	{ __index = function(_, k)
+		if M[k] then
+			return M[k]
+		else
+			return require('telescope.builtin')[k]
+		end
+	end }
+)

@@ -59,7 +59,6 @@ require("formatter").setup {
     },
 
     lua = {
-      -- luafmt
       function()
         return {
           exe = "stylua",
@@ -75,7 +74,7 @@ vim.api.nvim_exec(
   [[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost *.js,*.rs,*.lua FormatWrite
+  autocmd BufWritePost *.js,*.rs,*.lua,*.css,*.scss FormatWrite
 augroup END
 ]],
   true

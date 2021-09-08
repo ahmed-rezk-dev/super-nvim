@@ -170,6 +170,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
+  ["nvim-spectre"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-spectre"
+  },
   ["nvim-toggleterm.lua"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-toggleterm.lua"
@@ -206,6 +210,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
+  ["popup-menu.nvim"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/popup-menu.nvim"
+  },
   ["popup.nvim"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/popup.nvim"
@@ -213,6 +221,14 @@ _G.packer_plugins = {
   ["project.nvim"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/project.nvim"
+  },
+  sniprun = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/sniprun"
+  },
+  ["spelunker.vim"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/spelunker.vim"
   },
   ["startuptime.vim"] = {
     loaded = true,
@@ -249,6 +265,10 @@ _G.packer_plugins = {
   ["vim-rooter"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-rooter"
+  },
+  ["vim-twig"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-twig"
   },
   ["vim-vsnip"] = {
     loaded = true,

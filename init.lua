@@ -124,5 +124,5 @@ vim.g.colors_name = O.colorscheme -- Colorscheme must get called after plugins a
 
 -- lua
 -- vim.g.rooter_silent_chdir = 1
-vim.g.nvim_tree_update_cwd = 1
+-- vim.g.nvim_tree_update_cwd = 1
 vim.g.nvim_tree_respect_buf_cwd = 1

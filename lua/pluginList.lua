@@ -107,6 +107,14 @@ return require("packer").startup(function()
 
   -- Code Runner.
   use { "michaelb/sniprun", run = "bash ./install.sh" }
+
+  -- Surround
+  use {
+    "blackCauldron7/surround.nvim",
+    config = function()
+      require("surround").setup { mappings_style = "surround" }
+    end,
+  }
 end, {
   display = {
     border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" },

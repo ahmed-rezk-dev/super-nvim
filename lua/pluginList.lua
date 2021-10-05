@@ -108,6 +108,7 @@ return require("packer").startup(function()
   -- Code Runner.
   use { "michaelb/sniprun", run = "bash ./install.sh" }
 
+  --* Editor support *--
   -- Surround
   use {
     "blackCauldron7/surround.nvim",
@@ -115,6 +116,11 @@ return require("packer").startup(function()
       require("surround").setup { mappings_style = "surround" }
     end,
   }
+  -- Markdown Preview
+  use { "iamcco/markdown-preview.nvim", run = "cd app && npm install" }
+
+  -- Editor development
+  use "nvim-treesitter/playground"
 end, {
   display = {
     border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" },

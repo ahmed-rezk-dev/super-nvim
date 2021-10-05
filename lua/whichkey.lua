@@ -67,6 +67,8 @@ local mappings = {
   ["e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" },
   ["f"] = { "<cmd>Telescope find_files<CR>", "Find File" },
   ["h"] = { '<cmd>let @/=""<CR>', "No Highlight" },
+  ["m"] = { "<cmd>MarkdownPreviewToggle<CR>", "Markdown Preview" },
+
   L = {
     "<cmd>:put =printf('console.log('' 🔔 %s 👉 %s 👉 %s:'', %s);', line('.'), expand('%:t'), expand('<cword>'), expand('<cword>'))<cr>",
     "Javascript Log",
@@ -194,6 +196,8 @@ local mappings = {
   T = {
     name = "Treesitter",
     i = { ":TSConfigInfo<cr>", "Info" },
+    p = { ":TSPlaygroundToggle<cr>", "Playground" },
+    h = { ":TSHighlightCapturesUnderCursor<cr>", "Syntax highlight" },
   },
 
   S = {

@@ -58,6 +58,7 @@ local vopts = {
 -- see https://neovim.io/doc/user/map.html#:map-cmd
 local vmappings = {
   ["/"] = { ":CommentToggle<CR>", "Comment" },
+  ["j"] = { ":'<,'>SnipRun<CR>", "Run Javascript" },
 }
 local mappings = {
   ["w"] = { "<cmd>w!<CR>", "Save" },
@@ -105,6 +106,7 @@ local mappings = {
     s = { "<cmd>lua require'dap'.continue()<cr>", "Start" },
     S = { "<cmd>lua require'dapui'.toggle()<cr>", "Sidebar" },
     q = { "<cmd>lua require'dap'.stop()<cr>", "Quit" },
+    J = { "<cmd>:'<,'>SnipRun<cr>", "Javascript Run" },
   },
   g = {
     name = "Git",
@@ -256,3 +258,6 @@ vim.api.nvim_set_keymap("n", "<Leader>fn", [[<Cmd> DashboardNewFile<CR>]], opt)
 vim.api.nvim_set_keymap("n", "<Leader>fb", [[<Cmd> DashboardJumpMarks<CR>]], opt)
 vim.api.nvim_set_keymap("n", "<Leader>fl", [[<Cmd> SessionLoad<CR>]], opt)
 vim.api.nvim_set_keymap("n", "<Leader>fs", [[<Cmd> SessionSave<CR>]], opt)
+
+-- J = { "<cmd>:'<,'>SnipRun<cr>", "Javascript Run" },
+vim.api.nvim_set_keymap("v", "<C-j>", [[<Cmd>'<,'>SnipRun<CR>]], { noremap = true, silent = false })

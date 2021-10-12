@@ -12,13 +12,13 @@ g.nvim_tree_icons = {
   default = " ",
   symlink = " ",
   git = {
-    unstaged = "✗",
+    unstaged = "",
     staged = "✓",
     unmerged = "",
     renamed = "➜",
-    untracked = "★",
+    untracked = "",
     deleted = "",
-    ignored = "◌",
+    ignored = "裏",
   },
   folder = {
     arrow_open = "",

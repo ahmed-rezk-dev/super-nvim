@@ -51,6 +51,13 @@ local Treesitter = {
   TSStructure = { fg = C.purple_test },
   TSStrong = { fg = C.yellow },
   TSQueryLinterError = { fg = C.warning_orange },
+
+  -- My Update
+  typescriptVariableDeclaration = { fg = C.red_light },
+  typescriptBlock = { fg = C.blue },
+  tsxEscJs = { fg = C.red_light }, -- variable
+  -- typescriptFuncName = { fg = C.blue },
+  typescriptIdentifierName = { fg = C.red_light },
 }
 
 return Treesitter

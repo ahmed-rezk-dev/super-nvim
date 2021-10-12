@@ -11,9 +11,6 @@ require "config.settings"
 require "config.utils"
 require "config.autocommands"
 
--- Colors/Theme
--- require "themes.colorscheme"
-
 require "top-bufferline"
 require "statusline"
 
@@ -24,12 +21,14 @@ require "compe-completion"
 require "lsp-signature"
 require "pl-formatter"
 
-local cmd = vim.cmd
+-- local cmd = vim.cmd
 local g = vim.g
 
 g.mapleader = " "
 g.auto_save = 0
 
+-- Colors/Theme
+-- require "themes.colorscheme"
 require "themes.gruvbox-dark"
 -- require 'themes.spacegray'
 -- require "highlights"

@@ -5,11 +5,12 @@ local use = packer.use
 return require("packer").startup(function()
   use "wbthomason/packer.nvim"
 
-  -- color related stuff
+  -- color/themes related stuff
   use "siduck76/nvim-base16.lua"
   use "norcalli/nvim-colorizer.lua"
   -- use 'christianchiarulli/nvcode-color-schemes.vim'
   -- use "morhetz/gruvbox"
+  use "marko-cerovac/material.nvim"
 
   -- vim-rooter
   use "airblade/vim-rooter"

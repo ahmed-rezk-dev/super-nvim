@@ -25,7 +25,55 @@ require("formatter").setup {
         }
       end,
     },
+    typescript = {
+      -- prettier
+      function()
+        local args = { "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)) }
+        -- use the global prettier if you didn't find the local one
+        local prettier_instance = root_dir .. "/node_modules/.bin/prettier"
+        if vim.fn.executable(prettier_instance) ~= 1 then
+          prettier_instance = O.lang.tsserver.formatter.exe
+        end
+        return {
+          exe = prettier_instance,
+          args = args,
+          stdin = true,
+        }
+      end,
+    },
     javascriptreact = {
+      -- prettier
+      function()
+        local args = { "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)) }
+        -- use the global prettier if you didn't find the local one
+        local prettier_instance = root_dir .. "/node_modules/.bin/prettier"
+        if vim.fn.executable(prettier_instance) ~= 1 then
+          prettier_instance = O.lang.tsserver.formatter.exe
+        end
+        return {
+          exe = prettier_instance,
+          args = args,
+          stdin = true,
+        }
+      end,
+    },
+    typescriptreact = {
+      -- prettier
+      function()
+        local args = { "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)) }
+        -- use the global prettier if you didn't find the local one
+        local prettier_instance = root_dir .. "/node_modules/.bin/prettier"
+        if vim.fn.executable(prettier_instance) ~= 1 then
+          prettier_instance = O.lang.tsserver.formatter.exe
+        end
+        return {
+          exe = prettier_instance,
+          args = args,
+          stdin = true,
+        }
+      end,
+    },
+    tsserver = {
       -- prettier
       function()
         local args = { "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)) }
@@ -74,7 +122,7 @@ vim.api.nvim_exec(
   [[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost *.js,*.rs,*.lua,*.css,*.scss FormatWrite
+  autocmd BufWritePost *.js,*.rs,*.lua,*.css,*.scss,*.ts,*.tsx FormatWrite
 augroup END
 ]],
   true

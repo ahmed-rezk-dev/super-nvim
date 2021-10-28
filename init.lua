@@ -95,13 +95,13 @@ require "lsp"
 -- require('lsp.php-ls')
 -- require('lsp.dart-ls')
 require "lsp.lua-ls"
--- require('lsp.bash-ls')
+require "lsp.bash-ls"
 -- require('lsp.go-ls')
 require "lsp.js-ts-ls"
 -- require('lsp.python-ls')
 -- require('lsp.rust-ls')
 require "lsp.json-ls"
--- require('lsp.yaml-ls')
+require "lsp.yaml-ls"
 require "lsp.terraform-ls"
 require "lsp.vim-ls"
 require "lsp.graphql-ls"

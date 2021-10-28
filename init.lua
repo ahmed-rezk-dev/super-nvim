@@ -35,6 +35,7 @@ require "themes.gruvbox-dark"
 
 -- Syntax
 require "pl-todo-comments"
+require("surround").setup { mappings_style = "surround" }
 
 -- blankline
 require "indentline"
@@ -113,6 +114,7 @@ require "lsp.efm-general-ls"
 -- require('lsp.latex-ls')
 -- require('lsp.svelte-ls')
 require "lsp.emmet-ls"
+require "lsp.cs-ls"
 
 -- Code Runner
 require "pl-code-runner"

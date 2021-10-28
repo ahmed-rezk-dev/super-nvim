@@ -111,12 +111,8 @@ return require("packer").startup(function()
 
   --* Editor support *--
   -- Surround
-  use {
-    "blackCauldron7/surround.nvim",
-    config = function()
-      require("surround").setup { mappings_style = "surround" }
-    end,
-  }
+  use "blackCauldron7/surround.nvim"
+
   -- Markdown Preview
   use { "iamcco/markdown-preview.nvim", run = "cd app && npm install" }
 

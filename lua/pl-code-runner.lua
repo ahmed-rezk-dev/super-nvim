@@ -16,6 +16,11 @@ require("sniprun").setup {
     -- "Terminal"                 -- "display results in a vertical split
   },
 
+  show_no_output = {
+    "Classic",
+    "TempFloatingWindow", --# implies LongTempFloatingWindow, which has no effect on its own
+  },
+
   --" customize highlight groups (setting this overrides colorscheme)
   snipruncolors = {
     SniprunVirtualTextOk = { bg = "#66eeff", fg = "#000000", ctermbg = "Cyan", cterfg = "Black" },
@@ -25,7 +30,7 @@ require("sniprun").setup {
   },
 
   --" miscellaneous compatibility/adjustement settings
-  inline_messages = 0, --" inline_message (0/1) is a one-line way to display messages
+  inline_messages = 1, --" inline_message (0/1) is a one-line way to display messages
   --" to workaround sniprun not being able to display anything
 
   borders = "single", --" display borders around floating windows

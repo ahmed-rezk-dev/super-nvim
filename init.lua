@@ -11,7 +11,8 @@ require "config.settings"
 require "config.utils"
 require "config.autocommands"
 
-require "top-bufferline"
+-- require "top-bufferline"
+require "barbar-bufferline"
 require "statusline"
 
 require("neoscroll").setup() -- smooth scroll
@@ -30,7 +31,7 @@ g.auto_save = 0
 -- Colors/Theme
 -- require "themes.colorscheme"
 require "themes.gruvbox-dark"
--- require 'themes.spacegray'
+-- require "themes.spacegray"
 -- require "highlights"
 
 -- Syntax

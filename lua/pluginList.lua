@@ -31,7 +31,6 @@ return require("packer").startup(function()
   use "ray-x/lsp_signature.nvim"
 
   use "lewis6991/gitsigns.nvim"
-  use { "akinsho/nvim-bufferline.lua" }
   use "glepnir/galaxyline.nvim"
   use "windwp/nvim-autopairs"
   use "alvan/vim-closetag"
@@ -100,6 +99,7 @@ return require("packer").startup(function()
 
   use { "tzachar/compe-tabnine", run = "./install.sh" }
 
+  -- Spell checking
   use "kamykn/spelunker.vim"
   use "kamykn/popup-menu.nvim"
 
@@ -112,6 +112,12 @@ return require("packer").startup(function()
   --* Editor support *--
   -- Surround
   use "blackCauldron7/surround.nvim"
+  -- Top tabs
+  -- use { "akinsho/nvim-bufferline.lua" }
+  use {
+    "romgrk/barbar.nvim",
+    requires = { "kyazdani42/nvim-web-devicons" },
+  }
 
   -- Markdown Preview
   use { "iamcco/markdown-preview.nvim", run = "cd app && npm install" }

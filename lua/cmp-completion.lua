@@ -7,6 +7,23 @@ function M.setup()
   end
 
   local cmp = require "cmp"
+  local lspkind = require "lspkind"
+
+  -- cmp in cmdline is a WIP - I mostly use telescope to navigate anyway
+  cmp.setup.cmdline("/", {
+    sources = cmp.config.sources {
+      { name = "buffer" },
+    },
+  })
+
+  -- Use cmdline & path source for ':'.
+  cmp.setup.cmdline(":", {
+    sources = cmp.config.sources({
+      { name = "path" },
+    }, {
+      { name = "cmdline" },
+    }),
+  })
 
   cmp.setup {
     snippet = {
@@ -52,19 +69,50 @@ function M.setup()
         "s",
       }),
     },
+
+    experimental = {
+      ghost_text = true,
+    },
+    documentation = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    },
+
     sources = {
-      {
-        name = "nvim_lsp",
-      },
-      {
-        name = "buffer",
-      },
-      {
-        name = "luasnip",
-      },
-      {
-        name = "path",
-      },
+      -- 'crates' is lazy loaded
+      { name = "luasnip" },
+      { name = "cmp_tabnine" },
+      { name = "nvim_lsp" },
+      { name = "treesitter" },
+      { name = "path" },
+      { name = "spell" },
+      { name = "buffer" },
+      { name = "nvim_lua" },
+      { name = "look" },
+      { name = "calc" },
+      { name = "emoji" },
+      { name = "vsnip" },
+    },
+    formatting = {
+      format = function(entry, vim_item)
+        vim_item.kind = string.format("%s %s", lspkind.presets.default[vim_item.kind], vim_item.kind)
+        vim_item.menu = ({
+          luasnip = "(Snippet)",
+          nvim_lsp = "ﲳ",
+          nvim_lua = "",
+          treesitter = "",
+          path = "ﱮ",
+          buffer = "﬘",
+          zsh = "",
+          spell = "暈",
+          cmp_tabnine = "[TabNine]",
+          look = "[Look]",
+          calc = "[Calc]",
+          emoji = "[Emoji]",
+          -- vsnip = "",
+        })[entry.source.name]
+
+        return vim_item
+      end,
     },
   }
 end
@@ -78,6 +126,18 @@ M.luasnip = function()
 
   require("luasnip/loaders/from_vscode").lazy_load()
 end
+
+-- TabNine
+local tabnine = require "cmp_tabnine.config"
+tabnine:setup { max_lines = 1000, max_num_results = 20, sort = true }
+
+-- Database completion
+vim.api.nvim_exec(
+  [[
+autocmd FileType sql,mysql,plsql lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }} })
+]],
+  false
+)
 
 return M
 

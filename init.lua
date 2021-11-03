@@ -18,7 +18,6 @@ require "statusline"
 require("neoscroll").setup() -- smooth scroll
 
 -- lsp stuff
-require "compe-completion"
 require "lsp-signature"
 require "pl-formatter"
 
@@ -96,6 +95,7 @@ require "lsp"
 -- require('lsp.php-ls')
 -- require('lsp.dart-ls')
 require "lsp.lua-ls"
+
 require "lsp.bash-ls"
 -- require('lsp.go-ls')
 require "lsp.js-ts-ls"

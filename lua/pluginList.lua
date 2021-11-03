@@ -63,10 +63,7 @@ return require("packer").startup(function()
   use "lumiliet/vim-twig"
 
   -- snippet support
-  use "hrsh7th/vim-vsnip"
-  use "hrsh7th/vim-vsnip-integ"
-  use "rafamadriz/friendly-snippets"
-  use "hrsh7th/nvim-compe"
+  -- use "rafamadriz/friendly-snippets"
   -- use {
   --   "hrsh7th/nvim-cmp",
   --   requires = {
@@ -88,46 +85,63 @@ return require("packer").startup(function()
   --   end,
   -- }
   -- Completion
-  -- use {
-  --   "rafamadriz/friendly-snippets",
-  --   event = "InsertEnter",
-  -- }
-  -- use {
-  --   "hrsh7th/nvim-cmp",
-  --   after = "friendly-snippets",
-  --   config = function()
-  --     require("cmp-completion").setup()
-  --   end,
-  -- }
-  -- use {
-  --   "L3MON4D3/LuaSnip",
-  --   after = "nvim-cmp",
-  --   wants = "friendly-snippets",
-  --   config = function()
-  --     require("cmp-completion").luasnip()
-  --   end,
-  -- }
-  -- use {
-  --   "saadparwaiz1/cmp_luasnip",
-  --   after = "LuaSnip",
-  -- }
-  -- use {
-  --   "hrsh7th/cmp-nvim-lsp",
-  --   after = "cmp_luasnip",
-  -- }
-  -- use {
-  --   "hrsh7th/cmp-buffer",
-  --   after = "cmp-nvim-lsp",
-  -- }
-  -- use {
-  --   "hrsh7th/cmp-path",
-  --   after = "cmp-buffer",
-  -- }
-  -- use {
-  --   "tzachar/cmp-tabnine",
-  --   run = "./install.sh",
-  --   requires = "hrsh7th/nvim-cmp",
-  -- }
+  use {
+    "rafamadriz/friendly-snippets",
+    -- event = "InsertEnter",
+  }
+  use {
+    "hrsh7th/nvim-cmp",
+    after = "friendly-snippets",
+    -- requires = { "tzachar/cmp-tabnine" },
+    config = function()
+      require("cmp-completion").setup()
+    end,
+  }
+  use {
+    "L3MON4D3/LuaSnip",
+    after = "nvim-cmp",
+    wants = "friendly-snippets",
+    config = function()
+      require("cmp-completion").luasnip()
+    end,
+  }
+  use {
+    "saadparwaiz1/cmp_luasnip",
+    after = "LuaSnip",
+  }
+  use {
+    "hrsh7th/cmp-nvim-lsp",
+    after = "cmp_luasnip",
+  }
+  use {
+    "hrsh7th/cmp-buffer",
+    after = "cmp-nvim-lsp",
+  }
+  use {
+    "hrsh7th/cmp-path",
+    after = "cmp-buffer",
+  }
+  use {
+    "tzachar/cmp-tabnine",
+    run = "./install.sh",
+    requires = "hrsh7th/nvim-cmp",
+  }
+  use {
+    "hrsh7th/cmp-calc",
+    after = "nvim-cmp",
+  }
+  use {
+    "f3fora/cmp-spell",
+    after = "nvim-cmp",
+  }
+  use {
+    "hrsh7th/cmp-emoji",
+    after = "nvim-cmp",
+  }
+  use {
+    "hrsh7th/cmp-cmdline",
+    after = "nvim-cmp",
+  }
 
   -- file managing , picker etc
   use "kyazdani42/nvim-tree.lua"
@@ -180,7 +194,7 @@ return require("packer").startup(function()
   use { "nvim-telescope/telescope-dap.nvim" }
   use { "Pocco81/DAPInstall.nvim" }
 
-  use { "tzachar/compe-tabnine", run = "./install.sh" }
+  -- use { "tzachar/compe-tabnine", run = "./install.sh" }
 
   -- Spell checking
   use "kamykn/spelunker.vim"

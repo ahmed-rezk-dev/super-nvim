@@ -186,6 +186,7 @@ local mappings = {
     name = "Seacrh & Replace",
     w = { "<cmd>:lua require('spectre').open_visual({select_word=true})<cr>", "Search current word" },
     f = { "<cmd>:lua require('spectre').open_file_search()<cr>", "Search in current file" },
+    r = { "<cmd>:lua require('spectre.actions').run_replace()<cr>", "Replace" },
   },
 
   t = {

@@ -71,232 +71,289 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["DAPInstall.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/DAPInstall.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/DAPInstall.nvim",
+    url = "https://github.com/Pocco81/DAPInstall.nvim"
   },
   ["TrueZen.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/TrueZen.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/TrueZen.nvim",
+    url = "https://github.com/kdav5758/TrueZen.nvim"
+  },
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
   },
   ["compe-tabnine"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/compe-tabnine"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/compe-tabnine",
+    url = "https://github.com/tzachar/compe-tabnine"
   },
   ["dashboard-nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
+    url = "https://github.com/glepnir/dashboard-nvim"
   },
   ["formatter.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/formatter.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/friendly-snippets"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["galaxyline.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/galaxyline.nvim",
+    url = "https://github.com/glepnir/galaxyline.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   hop = {
     config = { "\27LJ\2\n¿\1\0\0\6\0\r\0\0226\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\a\0'\4\b\0005\5\t\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\n\0'\4\v\0005\5\f\0B\0\5\1K\0\1\0\1\0\1\vsilent\2\17:HopWord<cr>\6S\1\0\1\vsilent\2\18:HopChar2<cr>\6s\6n\20nvim_set_keymap\bapi\bvim\nsetup\bhop\frequire\0" },
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/hop"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/hop",
+    url = "https://github.com/phaazon/hop.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lsp_signature.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
+    url = "https://github.com/onsails/lspkind-nvim"
   },
   ["lspsaga.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["material.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/material.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
   },
   neoformat = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/neoformat"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/neoformat",
+    url = "https://github.com/sbdchd/neoformat"
   },
   ["neoscroll.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/neoscroll.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-base16.lua"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-base16.lua"
-  },
-  ["nvim-bufferline.lua"] = {
-    loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-base16.lua",
+    url = "https://github.com/siduck76/nvim-base16.lua"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-comment"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-comment"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-comment",
+    url = "https://github.com/terrortylor/nvim-comment"
   },
   ["nvim-compe"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-compe",
+    url = "https://github.com/hrsh7th/nvim-compe"
   },
   ["nvim-dap"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-dap"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
   },
   ["nvim-dap-ui"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-dap-ui"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-lspinstall"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-lspinstall",
+    url = "https://github.com/kabouzeid/nvim-lspinstall"
   },
   ["nvim-spectre"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-spectre"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-spectre",
+    url = "https://github.com/windwp/nvim-spectre"
   },
   ["nvim-toggleterm.lua"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-toggleterm.lua"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-toggleterm.lua",
+    url = "https://github.com/akinsho/nvim-toggleterm.lua"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-ts-autotag"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["nvim-ts-context-commentstring"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
+    url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
   },
   ["nvim-ts-rainbow"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
+    url = "https://github.com/p00f/nvim-ts-rainbow"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
   },
   playground = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/playground"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["popup-menu.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/popup-menu.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/popup-menu.nvim",
+    url = "https://github.com/kamykn/popup-menu.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["project.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/project.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/project.nvim",
+    url = "https://github.com/ahmedkhalf/project.nvim"
   },
   sniprun = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/sniprun"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/sniprun",
+    url = "https://github.com/michaelb/sniprun"
   },
   ["spelunker.vim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/spelunker.vim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/spelunker.vim",
+    url = "https://github.com/kamykn/spelunker.vim"
   },
   ["startuptime.vim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/startuptime.vim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/startuptime.vim",
+    url = "https://github.com/tweekmonster/startuptime.vim"
   },
   ["surround.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/surround.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/surround.nvim",
+    url = "https://github.com/blackCauldron7/surround.nvim"
   },
   ["telescope-dap.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
+    url = "https://github.com/nvim-telescope/telescope-dap.nvim"
   },
   ["telescope-media-files.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
+    url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["todo-comments.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/todo-comments.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
   },
   ["vim-auto-save"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-auto-save"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-auto-save",
+    url = "https://github.com/907th/vim-auto-save"
   },
   ["vim-closetag"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-closetag"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-closetag",
+    url = "https://github.com/alvan/vim-closetag"
   },
   ["vim-devicons"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-devicons"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-devicons",
+    url = "https://github.com/ryanoasis/vim-devicons"
   },
   ["vim-rooter"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-rooter"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-rooter",
+    url = "https://github.com/airblade/vim-rooter"
   },
   ["vim-twig"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-twig"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-twig",
+    url = "https://github.com/lumiliet/vim-twig"
   },
   ["vim-vsnip"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    url = "https://github.com/hrsh7th/vim-vsnip"
   },
   ["vim-vsnip-integ"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ",
+    url = "https://github.com/hrsh7th/vim-vsnip-integ"
   },
   ["which-key.nvim"] = {
     loaded = true,
-    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/which-key.nvim"
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 

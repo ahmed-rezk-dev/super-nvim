@@ -1,3 +1,18 @@
+local execute = vim.api.nvim_command
+local fn = vim.fn
+
+local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+
+if fn.empty(fn.glob(install_path)) > 0 then
+  fn.system {
+    "git",
+    "clone",
+    "https://github.com/wbthomason/packer.nvim",
+    install_path,
+  }
+  execute "packadd packer.nvim"
+end
+
 local packer = require "packer"
 local use = packer.use
 
@@ -21,8 +36,14 @@ return require("packer").startup(function()
 
   -- lang stuff
   use "nvim-treesitter/nvim-treesitter"
-  use "neovim/nvim-lspconfig"
-  use "hrsh7th/nvim-compe"
+  use {
+    "neovim/nvim-lspconfig",
+    -- opt = true,
+    -- after = "nvim-cmp",
+    -- config = function()
+    --   require("lsp").setup()
+    -- end,
+  }
   use "onsails/lspkind-nvim"
   use "sbdchd/neoformat"
   use "nvim-lua/plenary.nvim"
@@ -45,6 +66,68 @@ return require("packer").startup(function()
   use "hrsh7th/vim-vsnip"
   use "hrsh7th/vim-vsnip-integ"
   use "rafamadriz/friendly-snippets"
+  use "hrsh7th/nvim-compe"
+  -- use {
+  --   "hrsh7th/nvim-cmp",
+  --   requires = {
+  --     "hrsh7th/cmp-buffer",
+  --     "hrsh7th/cmp-nvim-lsp",
+  --     "hrsh7th/cmp-nvim-lua",
+  --     "octaltree/cmp-look",
+  --     "hrsh7th/cmp-path",
+  --     "hrsh7th/cmp-calc",
+  --     "f3fora/cmp-spell",
+  --     "hrsh7th/cmp-emoji",
+  --     "hrsh7th/cmp-cmdline",
+  --     "L3MON4D3/LuaSnip",
+  --     "saadparwaiz1/cmp_luasnip",
+  --   },
+  --   after = "friendly-snippets",
+  --   config = function()
+  --     require("cmp-completion").setup()
+  --   end,
+  -- }
+  -- Completion
+  -- use {
+  --   "rafamadriz/friendly-snippets",
+  --   event = "InsertEnter",
+  -- }
+  -- use {
+  --   "hrsh7th/nvim-cmp",
+  --   after = "friendly-snippets",
+  --   config = function()
+  --     require("cmp-completion").setup()
+  --   end,
+  -- }
+  -- use {
+  --   "L3MON4D3/LuaSnip",
+  --   after = "nvim-cmp",
+  --   wants = "friendly-snippets",
+  --   config = function()
+  --     require("cmp-completion").luasnip()
+  --   end,
+  -- }
+  -- use {
+  --   "saadparwaiz1/cmp_luasnip",
+  --   after = "LuaSnip",
+  -- }
+  -- use {
+  --   "hrsh7th/cmp-nvim-lsp",
+  --   after = "cmp_luasnip",
+  -- }
+  -- use {
+  --   "hrsh7th/cmp-buffer",
+  --   after = "cmp-nvim-lsp",
+  -- }
+  -- use {
+  --   "hrsh7th/cmp-path",
+  --   after = "cmp-buffer",
+  -- }
+  -- use {
+  --   "tzachar/cmp-tabnine",
+  --   run = "./install.sh",
+  --   requires = "hrsh7th/nvim-cmp",
+  -- }
 
   -- file managing , picker etc
   use "kyazdani42/nvim-tree.lua"

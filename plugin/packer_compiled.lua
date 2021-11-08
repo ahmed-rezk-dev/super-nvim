@@ -237,6 +237,11 @@ _G.packer_plugins = {
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
     url = "https://github.com/karb94/neoscroll.nvim"
   },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -248,7 +253,7 @@ _G.packer_plugins = {
     url = "https://github.com/siduck76/nvim-base16.lua"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-calc", "cmp-cmdline", "cmp-emoji", "LuaSnip", "cmp-spell" },
+    after = { "cmp-calc", "cmp-cmdline", "LuaSnip", "cmp-spell", "cmp-emoji" },
     config = { "\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19cmp-completion\frequire\0" },
     loaded = true,
     needs_bufread = false,
@@ -439,9 +444,6 @@ vim.cmd [[ packadd nvim-cmp ]]
 -- Config for: nvim-cmp
 try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19cmp-completion\frequire\0", "config", "nvim-cmp")
 
-vim.cmd [[ packadd cmp-emoji ]]
-vim.cmd [[ packadd cmp-cmdline ]]
-vim.cmd [[ packadd cmp-spell ]]
 vim.cmd [[ packadd LuaSnip ]]
 
 -- Config for: LuaSnip
@@ -451,7 +453,10 @@ vim.cmd [[ packadd cmp_luasnip ]]
 vim.cmd [[ packadd cmp-nvim-lsp ]]
 vim.cmd [[ packadd cmp-buffer ]]
 vim.cmd [[ packadd cmp-path ]]
+vim.cmd [[ packadd cmp-emoji ]]
+vim.cmd [[ packadd cmp-cmdline ]]
 vim.cmd [[ packadd cmp-calc ]]
+vim.cmd [[ packadd cmp-spell ]]
 time([[Sequenced loading]], false)
 if should_profile then save_profiles() end
 

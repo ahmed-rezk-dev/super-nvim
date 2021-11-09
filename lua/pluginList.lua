@@ -26,7 +26,12 @@ return require("packer").startup(function()
   -- use 'christianchiarulli/nvcode-color-schemes.vim'
   -- use "morhetz/gruvbox"
   use "marko-cerovac/material.nvim"
-  use "EdenEast/nightfox.nvim"
+  use {
+    "EdenEast/nightfox.nvim",
+    config = function()
+      require("themes.nightfox").setup()
+    end,
+  }
 
   -- vim-rooter
   use "airblade/vim-rooter"

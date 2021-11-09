@@ -65,8 +65,8 @@ local mappings = {
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["/"] = { "<cmd>CommentToggle<CR>", "Comment" },
   ["c"] = { "<cmd>BufferClose!<CR>", "Close Buffer" },
-  ["e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" },
-  ["f"] = { "<cmd>Telescope find_files<CR>", "Find File" },
+  ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+  ["f"] = { "<cmd>Telescope find_files<cr>", "Find File" },
   ["h"] = { '<cmd>let @/=""<CR>', "No Highlight" },
   ["m"] = { "<cmd>MarkdownPreviewToggle<CR>", "Markdown Preview" },
 

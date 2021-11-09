@@ -238,6 +238,7 @@ _G.packer_plugins = {
     url = "https://github.com/karb94/neoscroll.nvim"
   },
   ["nightfox.nvim"] = {
+    config = { "\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20themes.nightfox\frequire\0" },
     loaded = true,
     path = "/Users/ahmedrezk/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
     url = "https://github.com/EdenEast/nightfox.nvim"
@@ -253,7 +254,7 @@ _G.packer_plugins = {
     url = "https://github.com/siduck76/nvim-base16.lua"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-calc", "cmp-cmdline", "LuaSnip", "cmp-spell", "cmp-emoji" },
+    after = { "cmp-spell", "cmp-cmdline", "LuaSnip", "cmp-calc", "cmp-emoji" },
     config = { "\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19cmp-completion\frequire\0" },
     loaded = true,
     needs_bufread = false,
@@ -437,6 +438,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for hop]], true)
 try_loadstring("\27LJ\2\nÀ\1\0\0\6\0\r\0\0226\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\a\0'\4\b\0005\5\t\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\n\0'\4\v\0005\5\f\0B\0\5\1K\0\1\0\1\0\1\vsilent\2\17:HopWord<cr>\6S\1\0\1\vsilent\2\18:HopChar2<cr>\6s\6n\20nvim_set_keymap\bapi\bvim\nsetup\bhop\frequire\0", "config", "hop")
 time([[Config for hop]], false)
+-- Config for: nightfox.nvim
+time([[Config for nightfox.nvim]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20themes.nightfox\frequire\0", "config", "nightfox.nvim")
+time([[Config for nightfox.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-cmp ]]
@@ -455,8 +460,8 @@ vim.cmd [[ packadd cmp-buffer ]]
 vim.cmd [[ packadd cmp-path ]]
 vim.cmd [[ packadd cmp-emoji ]]
 vim.cmd [[ packadd cmp-cmdline ]]
-vim.cmd [[ packadd cmp-calc ]]
 vim.cmd [[ packadd cmp-spell ]]
+vim.cmd [[ packadd cmp-calc ]]
 time([[Sequenced loading]], false)
 if should_profile then save_profiles() end
 

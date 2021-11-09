@@ -29,9 +29,10 @@ g.auto_save = 0
 
 -- Colors/Theme
 -- require "themes.colorscheme"
-require "themes.gruvbox-dark"
+-- require "themes.gruvbox-dark"
 -- require "themes.spacegray"
 -- require "highlights"
+-- require "themes.nightfox"
 
 -- Syntax
 require "pl-todo-comments"

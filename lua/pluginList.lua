@@ -22,7 +22,12 @@ return require("packer").startup(function()
 
   -- color/themes related stuff
   use "siduck76/nvim-base16.lua"
-  use "norcalli/nvim-colorizer.lua"
+  use {
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("_colorizer").setup()
+    end,
+  }
   -- use 'christianchiarulli/nvcode-color-schemes.vim'
   -- use "morhetz/gruvbox"
   use "marko-cerovac/material.nvim"
@@ -58,7 +63,6 @@ return require("packer").startup(function()
   use "ray-x/lsp_signature.nvim"
 
   use "lewis6991/gitsigns.nvim"
-  use "glepnir/galaxyline.nvim"
   use "windwp/nvim-autopairs"
   use "alvan/vim-closetag"
 
@@ -68,29 +72,7 @@ return require("packer").startup(function()
   use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" } -- Better todo heighlight
   use "lumiliet/vim-twig"
 
-  -- snippet support
-  -- use "rafamadriz/friendly-snippets"
-  -- use {
-  --   "hrsh7th/nvim-cmp",
-  --   requires = {
-  --     "hrsh7th/cmp-buffer",
-  --     "hrsh7th/cmp-nvim-lsp",
-  --     "hrsh7th/cmp-nvim-lua",
-  --     "octaltree/cmp-look",
-  --     "hrsh7th/cmp-path",
-  --     "hrsh7th/cmp-calc",
-  --     "f3fora/cmp-spell",
-  --     "hrsh7th/cmp-emoji",
-  --     "hrsh7th/cmp-cmdline",
-  --     "L3MON4D3/LuaSnip",
-  --     "saadparwaiz1/cmp_luasnip",
-  --   },
-  --   after = "friendly-snippets",
-  --   config = function()
-  --     require("cmp-completion").setup()
-  --   end,
-  -- }
-  -- Completion
+  -- snippet/Completion support
   use {
     "rafamadriz/friendly-snippets",
     -- event = "InsertEnter",
@@ -98,7 +80,6 @@ return require("packer").startup(function()
   use {
     "hrsh7th/nvim-cmp",
     after = "friendly-snippets",
-    -- requires = { "tzachar/cmp-tabnine" },
     config = function()
       require("cmp-completion").setup()
     end,
@@ -191,6 +172,13 @@ return require("packer").startup(function()
       require("hop").setup()
       vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
       vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
+    end,
+  }
+
+  use {
+    "nvim-lualine/lualine.nvim",
+    config = function()
+      require("_lualine").setup()
     end,
   }
 

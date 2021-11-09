@@ -13,7 +13,7 @@ require "config.autocommands"
 
 -- require "top-bufferline"
 require "barbar-bufferline"
-require "statusline"
+-- require "statusline"
 
 require("neoscroll").setup() -- smooth scroll
 

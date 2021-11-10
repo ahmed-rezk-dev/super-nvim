@@ -118,9 +118,6 @@ require "lsp.efm-general-ls"
 require "lsp.emmet-ls"
 require "lsp.cs-ls"
 
--- Code Runner
-require "pl-code-runner"
-
 vim.g.colors_name = O.colorscheme -- Colorscheme must get called after plugins are loaded or it will break new installs.
 -- vim.cmd "let proj = FindRootDirectory()"
 -- local root_dir = vim.api.nvim_get_var "proj"

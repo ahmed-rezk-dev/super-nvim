@@ -46,7 +46,7 @@ function M.setup()
     options = {
       -- Disable sections and component separators
       -- theme = bubbles_theme,
-      component_separators = "|",
+      component_separators = "",
       section_separators = { left = "", right = "" },
       theme = "nightfox",
     },
@@ -142,7 +142,7 @@ function M.setup()
     icon = " LSP:",
     color = { fg = "#ffffff", gui = "bold" },
   }
-  ins_left { "filetype" }
+  -- ins_left { "filetype" }
 
   ins_right {
     "o:encoding", -- option component same as &encoding in viml

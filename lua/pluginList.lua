@@ -14,6 +14,16 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 local packer = require "packer"
+packer.startup {
+  function() end,
+  config = {
+    display = {
+      open_fn = function()
+        return require("packer.util").float { border = "rounded" }
+      end,
+    },
+  },
+}
 local use = packer.use
 
 -- using { } for using different branch , loading plugin with certain commands etc
@@ -198,7 +208,13 @@ return require("packer").startup(function()
   use "windwp/nvim-spectre"
 
   -- Code Runner.
-  use { "michaelb/sniprun", run = "bash ./install.sh" }
+  use {
+    "michaelb/sniprun",
+    run = "bash ./install.sh",
+    config = function()
+      require("_code-runner").setup()
+    end,
+  }
 
   --* Editor support *--
   -- Surround

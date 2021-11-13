@@ -56,7 +56,15 @@ return require("packer").startup(function()
   }
 
   -- lang stuff
+  -- Treesitter
   use "nvim-treesitter/nvim-treesitter"
+  use {
+    "p00f/nvim-ts-rainbow",
+  }
+  use "JoosepAlviste/nvim-ts-context-commentstring"
+  use "windwp/nvim-ts-autotag"
+  use "terrortylor/nvim-comment"
+
   use {
     "neovim/nvim-lspconfig",
     -- opt = true,
@@ -156,12 +164,6 @@ return require("packer").startup(function()
   use "kdav5758/TrueZen.nvim"
   use "folke/which-key.nvim"
   use { "lukas-reineke/indent-blankline.nvim", branch = "master" }
-
-  -- Treesitter
-  use "p00f/nvim-ts-rainbow"
-  use "JoosepAlviste/nvim-ts-context-commentstring"
-  use "windwp/nvim-ts-autotag"
-  use "terrortylor/nvim-comment"
 
   -- Git
   -- use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }

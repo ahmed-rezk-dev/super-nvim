@@ -3,6 +3,8 @@ local ts_config = require "nvim-treesitter.configs"
 ts_config.setup {
   ensure_installed = {
     "javascript",
+    "typescript",
+    "tsx",
     "html",
     "css",
     "bash",
@@ -13,10 +15,22 @@ ts_config.setup {
   highlight = {
     enable = true,
     use_languagetree = true,
+    additional_vim_regex_highlighting = true,
+    disable = { "latex" },
   },
   autotag = { enable = true },
-  rainbow = { enable = true },
-  context_commentstring = { enable = true, config = { javascriptreact = { style_element = "{/*%s*/}" } } },
+  rainbow = { enable = true, extended_mode = true },
+  context_commentstring = {
+    enable = true,
+    config = { javascriptreact = { style_element = "{/*%s*/}" } },
+    typescript = "// %s",
+    css = "/* %s */",
+    scss = "/* %s */",
+    html = "<!-- %s -->",
+    svelte = "<!-- %s -->",
+    vue = "<!-- %s -->",
+    json = "",
+  },
 
   playground = {
     enable = true,

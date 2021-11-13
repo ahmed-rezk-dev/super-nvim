@@ -217,10 +217,11 @@ return require("packer").startup(function()
       require("_code-runner").setup()
     end,
   }
-
-  --* Editor support *--
-  -- Surround
-  use "blackCauldron7/surround.nvim"
+  --------------------------------------------------------------------------- Editor support
+  -- use "blackCauldron7/surround.nvim" -- To support in future.
+  use {
+    "tpope/vim-surround",
+  }
   -- Top tabs
   -- use { "akinsho/nvim-bufferline.lua" }
   use {

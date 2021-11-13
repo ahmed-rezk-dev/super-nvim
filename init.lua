@@ -36,7 +36,6 @@ g.auto_save = 0
 
 -- Syntax
 require "pl-todo-comments"
-require("surround").setup { mappings_style = "surround" }
 
 -- blankline
 require "indentline"

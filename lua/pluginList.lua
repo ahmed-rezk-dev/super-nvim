@@ -234,6 +234,8 @@ return require("packer").startup(function()
 
   -- Editor development
   use "nvim-treesitter/playground"
+  -- Code snapshots
+  use "kristijanhusak/vim-carbon-now-sh"
 end, {
   display = {
     border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" },

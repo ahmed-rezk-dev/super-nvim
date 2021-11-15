@@ -59,6 +59,7 @@ local vopts = {
 local vmappings = {
   ["/"] = { ":CommentToggle<CR>", "Comment" },
   ["j"] = { ":'<,'>SnipRun<CR>", "Run Javascript" },
+  ["S"] = { ":'<,'>CarbonNowSh<CR>", "Snapshot" },
 }
 local mappings = {
   ["w"] = { "<cmd>w!<CR>", "Save" },

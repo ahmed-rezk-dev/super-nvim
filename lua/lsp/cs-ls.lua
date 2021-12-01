@@ -14,7 +14,7 @@
 
 local nvim_lsp = require "lspconfig"
 local pid = vim.fn.getpid()
-local omnisharp_bin = DATA_PATH .. "/lspinstall/csharp/omnisharp/run"
+local omnisharp_bin = DATA_PATH .. "/lsp_servers/csharp/omnisharp/run"
 
 require("lspconfig").omnisharp.setup {
   filetypes = { "cs" },

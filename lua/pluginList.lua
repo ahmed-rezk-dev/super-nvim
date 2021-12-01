@@ -67,6 +67,8 @@ return require("packer").startup(function()
 
   use {
     "neovim/nvim-lspconfig",
+    "williamboman/nvim-lsp-installer",
+
     -- opt = true,
     -- after = "nvim-cmp",
     -- config = function()
@@ -76,7 +78,6 @@ return require("packer").startup(function()
   use "onsails/lspkind-nvim"
   use "sbdchd/neoformat"
   use "nvim-lua/plenary.nvim"
-  use "kabouzeid/nvim-lspinstall"
   use "glepnir/lspsaga.nvim"
   use "ray-x/lsp_signature.nvim"
 
@@ -236,6 +237,7 @@ return require("packer").startup(function()
   use "nvim-treesitter/playground"
   -- Code snapshots
   use "kristijanhusak/vim-carbon-now-sh"
+  use "terryma/vim-multiple-cursors"
 end, {
   display = {
     border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" },

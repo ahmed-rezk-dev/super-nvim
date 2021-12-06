@@ -78,7 +78,12 @@ return require("packer").startup(function()
   use "onsails/lspkind-nvim"
   use "sbdchd/neoformat"
   use "nvim-lua/plenary.nvim"
-  use "glepnir/lspsaga.nvim"
+  -- use {
+  --   "glepnir/lspsaga.nvim",
+  --   config = function()
+  --     require("_lspsaga").setup()
+  --   end,
+  -- }
   use "ray-x/lsp_signature.nvim"
 
   use "lewis6991/gitsigns.nvim"
@@ -238,6 +243,28 @@ return require("packer").startup(function()
   -- Code snapshots
   use "kristijanhusak/vim-carbon-now-sh"
   use "terryma/vim-multiple-cursors"
+
+  use {
+    "rmagatti/goto-preview",
+    config = function()
+      require("goto-preview").setup {}
+    end,
+  }
+
+  use {
+    "ray-x/navigator.lua",
+    requires = { "ray-x/guihua.lua", run = "cd lua/fzy && make" },
+    config = function()
+      require("_navigator").setup()
+    end,
+  }
+  -- Bookmarks lines
+  -- use {
+  --   "chentau/marks.nvim",
+  --   config = function()
+  --     require("marks").setup {}
+  --   end,
+  -- }
 end, {
   display = {
     border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" },

@@ -45,7 +45,7 @@ O = {
     splitright = true, -- force all vertical splits to go to the right of current window
     swapfile = false, -- creates a swapfile
     termguicolors = true, -- set term gui colors (most terminals support this)
-    timeoutlen = 400, -- time to wait for a mapped sequence to complete (in milliseconds)
+    timeoutlen = 300, -- time to wait for a mapped sequence to complete (in milliseconds)
     title = true, -- set the title of window to the value of the titlestring
     -- opt.titlestring = "%<%F%=%l/%L - nvim" -- what the title of the window will be set to
     undodir = CACHE_PATH .. "/undo", -- set an undo directory
@@ -129,7 +129,9 @@ O = {
     autoformat = false,
     diagnostics = { virtual_text = true, signs = true, underline = true },
   },
-  tailwindls = { filetypes = { "html", "css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact" } },
+  tailwindls = {
+    filetypes = { "html", "css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact" },
+  },
   clang = { diagnostics = { virtual_text = true, signs = true, underline = true } },
   lang = {
     tsserver = {

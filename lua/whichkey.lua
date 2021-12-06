@@ -40,7 +40,7 @@ wk.setup {
 
 local opts = {
   mode = "n", -- NORMAL mode
-  prefix = "<leader>",
+  prefix = "<space>",
   buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
   silent = true, -- use `silent` when creating keymaps
   noremap = true, -- use `noremap` when creating keymaps
@@ -48,7 +48,7 @@ local opts = {
 }
 local vopts = {
   mode = "v", -- VISUAL mode
-  prefix = "<leader>",
+  prefix = "<space>",
   buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
   silent = true, -- use `silent` when creating keymaps
   noremap = true, -- use `noremap` when creating keymaps
@@ -134,17 +134,41 @@ local mappings = {
 
   l = {
     name = "LSP",
-    a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-    d = {
-      "<cmd>Telescope lsp_document_diagnostics<cr>",
-      "Document Diagnostics",
-    },
-    w = {
-      "<cmd>Telescope lsp_workspace_diagnostics<cr>",
-      "Workspace Diagnostics",
-    },
-    f = { "<cmd>silent FormatWrite<cr>", "Format" },
-    i = { "<cmd>LspInfo<cr>", "Info" },
+    r = { "<cmd>:lua require('navigator.reference').reference()<cr>", "Reference" },
+    H = { "<cmd>:lua signature_help()<cr>", "Signature help" },
+    s = { "<cmd>:lua require('navigator.symbols').document_symbols()<cr>", "Document symbols" },
+    S = { "<cmd>:lua workspace_symbol()<cr>", "Workspace symbol" },
+    d = { "<cmd>:lua require('navigator.definition').definition()<cr>", "Definition" },
+    p = { "<cmd>:lua require('navigator.definition').definition_preview()<cr>", "Definition preview" },
+    D = { "<cmd>:lua declaration({ border = 'rounded', max_width = 80 })<cr>", "Declaration" },
+    a = { "<cmd>:lua require('navigator.codeAction').code_action()<cr>", "Code action" },
+    A = { "<cmd>:lua range_code_action()<cr>", "Range code action" },
+    r = { "<cmd>:lua require('navigator.rename').rename()<cr>", "Rename" },
+    c = { "<cmd>:lua incoming_calls()<cr>", "Incoming calls" },
+    C = { "<cmd>:lua outgoing_calls(<cr>", "Outgoing calls" },
+    i = { "<cmd>:lua implementation()<cr>", "Implementation" },
+    t = { "<cmd>:lua type_definition()<cr>", "Type definition" },
+    L = { "<cmd>:lua require('navigator.diagnostics').show_diagnostics()<cr>", "Show diagnostics" },
+    B = { "<cmd>:lua require('navigator.diagnostics').show_buf_diagnostics()<cr>", "Show buf diagnostics" },
+    T = { "<cmd>:lua require('navigator.diagnostics').toggle_diagnostics()<cr>", "Toggle diagnostics" },
+    K = { "<cmd>:lua require('navigator.dochighlight').hi_symbol()<cr>", "Hi Symbol" },
+    w = { "<cmd>:lua add_workspace_folder()<cr>", "Add workspace folder" },
+    R = { "<cmd>:lua remove_workspace_folder()<cr>", "Remove workspace folder" },
+    W = { "<cmd>:lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>", "List workspace folders" },
+    -- f = { "<cmd>lua formatting()<cr>", "Formatting" },
+    -- F = { "<cmd>lua range_formatting<cr>", "Range formatting" },
+
+    -- a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+    -- d = {
+    --   "<cmd>Telescope lsp_document_diagnostics<cr>",
+    --   "Document Diagnostics",
+    -- },
+    -- w = {
+    --   "<cmd>Telescope lsp_workspace_diagnostics<cr>",
+    --   "Workspace Diagnostics",
+    -- },
+    -- f = { "<cmd>silent FormatWrite<cr>", "Format" },
+    -- i = { "<cmd>LspInfo<cr>", "Info" },
     j = {
       "<cmd>lua vim.lsp.diagnostic.goto_next({popup_opts = {border = O.lsp.popup_border}})<cr>",
       "Next Diagnostic",
@@ -153,14 +177,14 @@ local mappings = {
       "<cmd>lua vim.lsp.diagnostic.goto_prev({popup_opts = {border = O.lsp.popup_border}})<cr>",
       "Prev Diagnostic",
     },
-    l = { "<cmd>silent lua require('lint').try_lint()<cr>", "Lint" },
-    q = { "<cmd>Telescope quickfix<cr>", "Quickfix" },
-    r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-    s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-    S = {
-      "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-      "Workspace Symbols",
-    },
+    -- l = { "<cmd>silent lua require('lint').try_lint()<cr>", "Lint" },
+    -- q = { "<cmd>Telescope quickfix<cr>", "Quickfix" },
+    -- r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+    -- s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
+    -- S = {
+    --   "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+    --   "Workspace Symbols",
+    -- },
   },
 
   s = {
@@ -216,6 +240,14 @@ local mappings = {
   --   w = { "<cmd>:lua require('spectre').open_visual({select_word=true})<cr>", "Search current word" },
   --   f = { "<cmd>:lua require('spectre').open_file_search()<cr>", "Search in current file" },
   -- },
+
+  G = {
+    name = "Go To",
+    d = { "<cmd>:lua require('goto-preview').goto_preview_definition()<CR>", "Definition" },
+    i = { "<cmd>:lua require('goto-preview').goto_preview_implementation()<CR>", "Implementation" },
+    c = { "<cmd>:lua require('goto-preview').close_all_win()<CR>", "Close" },
+    r = { "<cmd>:lua require('goto-preview').goto_preview_references()<CR>", "References" },
+  },
 }
 
 -- all of the mappings below are equivalent
@@ -238,7 +270,7 @@ wk.register(vmappings, vopts)
 
 local opt = { noremap = true, silent = true }
 
-vim.g.mapleader = " "
+vim.g.mapleader = ","
 
 -- mappings
 vim.api.nvim_set_keymap("n", "<Leader>ff", [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], opt)
@@ -253,6 +285,8 @@ vim.api.nvim_set_keymap("n", "<Leader>fb", [[<Cmd>lua require('telescope.builtin
 vim.api.nvim_set_keymap("n", "<Leader>fh", [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]], opt)
 vim.api.nvim_set_keymap("n", "<Leader>fo", [[<Cmd>lua require('telescope.builtin').oldfiles()<CR>]], opt)
 vim.api.nvim_set_keymap("n", "<Leader>fm", [[<Cmd> Neoformat<CR>]], opt)
+-- vim.api.nvim_set_keymap("n", "<Leader>pp", [[<Cmd>lua require('lsp.lsp-ext').peek_definition()<CR>]], opt)
+vim.api.nvim_set_keymap("n", "<Leader>pp", [[<Cmd>lua require('lsp.lsp-ext').test_window()<CR>]], opt)
 
 -- dashboard stuff
 vim.api.nvim_set_keymap("n", "<Leader>fw", [[<Cmd> Telescope live_grep<CR>]], opt)
@@ -263,3 +297,8 @@ vim.api.nvim_set_keymap("n", "<Leader>fs", [[<Cmd> SessionSave<CR>]], opt)
 
 -- J = { "<cmd>:'<,'>SnipRun<cr>", "Javascript Run" },
 vim.api.nvim_set_keymap("v", "<C-j>", [[<Cmd>'<,'>SnipRun<CR>]], { noremap = true, silent = false })
+
+vim.api.nvim_set_keymap("n", "gD", [[<Cmd> lua require('goto-preview').goto_preview_definition()<CR>]], opt)
+vim.api.nvim_set_keymap("n", "gI", [[<Cmd> lua require('goto-preview').goto_preview_implementation()<CR>]], opt)
+vim.api.nvim_set_keymap("n", "gC", [[<Cmd>lua require('goto-preview').close_all_win()<CR>]], opt)
+vim.api.nvim_set_keymap("n", "gR", [[<Cmd>lua require('goto-preview').goto_preview_references(<CR>]], opt)

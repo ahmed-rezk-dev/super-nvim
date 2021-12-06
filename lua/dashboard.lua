@@ -15,7 +15,7 @@ g.dashboard_custom_section = {
 -- print(num_plugins_loaded)
 local node_version = vim.fn.systemlist("node -v")[1]
 local npm_version = vim.fn.systemlist("npm -v")[1]
-local pod_version = vim.fn.systemlist("pod --version")[2]
+--local pod_version = vim.fn.systemlist("pod --version")[2]
 local xcode_version = vim.fn.systemlist("/usr/bin/xcodebuild -version")[1]
 -- local android_version = vim.fn.systemlist("node -v")[1]
 
@@ -23,7 +23,7 @@ local footer = {
   -- "Loaded " .. num_plugins_loaded .. " plugins ",
   "Node: " .. node_version,
   "npm: " .. npm_version,
-  "Cocoapods: " .. pod_version,
+  -- "Cocoapods: " .. pod_version,
   xcode_version,
   "",
   -- "Andriod: " .. andriod_version,

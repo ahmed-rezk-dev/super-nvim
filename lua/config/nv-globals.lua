@@ -69,10 +69,11 @@ O = {
 
   lsp = {
     diagnostics = {
-      virtual_text = {
-        prefix = "",
-        spacing = 0,
-      },
+      -- virtual_text = {
+      --   prefix = "",
+      --   spacing = 0,
+      -- },
+      virtual_text = false,
       signs = true,
       underline = true,
     },

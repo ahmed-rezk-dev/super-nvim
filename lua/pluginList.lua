@@ -251,13 +251,13 @@ return require("packer").startup(function()
     end,
   }
 
-  use {
-    "ray-x/navigator.lua",
-    requires = { "ray-x/guihua.lua", run = "cd lua/fzy && make" },
-    config = function()
-      require("_navigator").setup()
-    end,
-  }
+  -- use {
+  --   "ray-x/navigator.lua",
+  --   requires = { "ray-x/guihua.lua", run = "cd lua/fzy && make" },
+  --   config = function()
+  --     require("_navigator").setup()
+  --   end,
+  -- }
   -- Bookmarks lines
   -- use {
   --   "chentau/marks.nvim",

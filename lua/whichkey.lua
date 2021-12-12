@@ -168,7 +168,7 @@ local mappings = {
     --   "Workspace Diagnostics",
     -- },
     -- f = { "<cmd>silent FormatWrite<cr>", "Format" },
-    -- i = { "<cmd>LspInfo<cr>", "Info" },
+    i = { "<cmd>LspInfo<cr>", "Info" },
     j = {
       "<cmd>lua vim.lsp.diagnostic.goto_next({popup_opts = {border = O.lsp.popup_border}})<cr>",
       "Next Diagnostic",
